@@ -1,0 +1,294 @@
+version: "1.0"
+
+#-------------------------------------------------------------------------------
+# Global Simulation Settings
+#-------------------------------------------------------------------------------
+simulation_settings:
+  # Run for 10 minutes of simulation time
+  duration: "10m"
+
+  # Initialize with some entities
+  initial_entity_counts:
+    Product: 20
+    User: 5
+
+  # Time progression settings
+  time_progression:
+    # Use current time as the start time
+    start_time: "now"
+    # 10x faster than real time
+    time_multiplier: 10.0
+
+  # Fixed seed for reproducible runs
+  random_seed: 42
+
+#-------------------------------------------------------------------------------
+# Schema Definitions
+#-------------------------------------------------------------------------------
+schemas:
+  UserID:
+    type: string
+    generator: uuid_v4
+    description: "Unique identifier for a user."
+
+  Email:
+    type: string
+    generator: faker.email
+    description: "User's email address."
+
+  Password:
+    type: string
+    generator: static_hashed
+    params:
+      algorithm: "bcrypt"
+      raw_value_source:
+        generator: faker.password
+        params:
+          length: 12
+          special_chars: true
+          digits: true
+          upper_case: true
+          lower_case: true
+
+  Timestamp:
+    type: string
+    format: "iso8601"
+    generator: current_timestamp
+
+  ProductName:
+    type: string
+    generator: faker.ecommerce.product_name
+
+  ProductPrice:
+    type: number
+    generator: random_float
+    params:
+      min: 9.99
+      max: 99.99
+      precision: 2
+
+  UserRegistrationPayload:
+    type: object
+    properties:
+      user_id: { $ref: "#/schemas/UserID" }
+      full_name:
+        type: string
+        generator: faker.name
+      email: { $ref: "#/schemas/Email" }
+      password_hash: { $ref: "#/schemas/Password" }
+      registration_timestamp: { $ref: "#/schemas/Timestamp" }
+      referral_code:
+        type: string
+        generator: random_alphanumeric
+        params:
+          length: 8
+        nullable_probability: 0.7
+
+  UserLoginPayload:
+    type: object
+    properties:
+      user_id:
+        { $ref: "#/schemas/UserID", from_entity: "User", field: "user_id" }
+      login_timestamp: { $ref: "#/schemas/Timestamp" }
+      ip_address:
+        type: string
+        generator: faker.ipv4
+      user_agent:
+        type: string
+        generator: faker.user_agent
+
+  ProductPayload:
+    type: object
+    properties:
+      product_id:
+        type: string
+        generator: uuid_v4
+      name: { $ref: "#/schemas/ProductName" }
+      description:
+        type: string
+        generator: faker.lorem.sentence
+        params:
+          nb_words: 10
+      price: { $ref: "#/schemas/ProductPrice" }
+      tags:
+        type: array
+        items:
+          type: string
+          generator: choice
+          params:
+            choices: ["new", "featured", "sale", "eco-friendly", "premium"]
+        min_items: 0
+        max_items: 3
+      status:
+        type: string
+        generator: choice
+        params:
+          choices: ["available", "discontinued", "coming_soon"]
+          weights: [0.8, 0.1, 0.1]
+      created_at: { $ref: "#/schemas/Timestamp" }
+
+  PurchasePayload:
+    type: object
+    properties:
+      purchase_id:
+        type: string
+        generator: uuid_v4
+      user_id:
+        { $ref: "#/schemas/UserID", from_entity: "User", field: "user_id" }
+      items:
+        type: array
+        min_items: 1
+        max_items: 3
+        items:
+          type: object
+          properties:
+            product_id:
+              { type: string, from_entity: "Product", field: "product_id" }
+            quantity:
+              type: integer
+              generator: random_int
+              params:
+                min: 1
+                max: 3
+            unit_price:
+              {
+                $ref: "#/schemas/ProductPrice",
+                from_entity: "Product",
+                field: "price",
+              }
+      total_amount:
+        type: number
+        generator: derived
+        params:
+          expression: "sum(item['quantity'] * item['unit_price'] for item in items)"
+          precision: 2
+      purchase_timestamp: { $ref: "#/schemas/Timestamp" }
+      shipping_method:
+        type: string
+        generator: conditional_choice
+        params:
+          condition_field: "total_amount"
+          cases:
+            - condition_value_greater_than: 50.00
+              choices: ["Free Standard Shipping", "Express Shipping"]
+              weights: [0.8, 0.2]
+            - default:
+              choices: ["Standard Shipping", "Express Shipping"]
+              weights: [0.7, 0.3]
+
+#-------------------------------------------------------------------------------
+# Entity Definitions
+#-------------------------------------------------------------------------------
+entities:
+  User:
+    schema: "#/schemas/UserRegistrationPayload"
+    primary_key: "user_id"
+    state_attributes:
+      is_logged_in: { type: boolean, default: false }
+      last_login_timestamp: { type: string, nullable: true }
+      total_purchase_value: { type: number, default: 0.0, precision: 2 }
+
+  Product:
+    schema: "#/schemas/ProductPayload"
+    primary_key: "product_id"
+    state_attributes:
+      current_status: { type: string, from_field: "status" }
+
+#-------------------------------------------------------------------------------
+# Event Type Definitions
+#-------------------------------------------------------------------------------
+event_types:
+  UserRegistered:
+    payload_schema: "#/schemas/UserRegistrationPayload"
+    produces_entity: "User"
+    frequency_weight: 5
+
+  UserLoggedIn:
+    payload_schema: "#/schemas/UserLoginPayload"
+    consumes_entities:
+      - name: "User"
+        alias: "logging_in_user"
+        selection_filter:
+          - field: "state.is_logged_in"
+            operator: "equals"
+            value: false
+    updates_entity_state:
+      - entity_alias: "logging_in_user"
+        set_attributes:
+          is_logged_in: true
+          last_login_timestamp: { from_payload_field: "login_timestamp" }
+    frequency_weight: 10
+
+  ProductCreated:
+    payload_schema: "#/schemas/ProductPayload"
+    produces_entity: "Product"
+    frequency_weight: 3
+
+  UserPurchasedProducts:
+    payload_schema: "#/schemas/PurchasePayload"
+    consumes_entities:
+      - name: "User"
+        alias: "buyer"
+        selection_filter:
+          - field: "state.is_logged_in"
+            operator: "equals"
+            value: true
+      - name: "Product"
+        alias: "purchased_item"
+        selection_filter:
+          - field: "state.current_status"
+            operator: "equals"
+            value: "available"
+    updates_entity_state:
+      - entity_alias: "buyer"
+        increment_attributes:
+          total_purchase_value: { from_payload_field: "total_amount" }
+    frequency_weight: 20
+
+#-------------------------------------------------------------------------------
+# Scenarios
+#-------------------------------------------------------------------------------
+scenarios:
+  NewUserOnboardingAndFirstPurchase:
+    description: "A new user registers, logs in, and makes a purchase."
+    initiation_weight: 70
+    steps:
+      - event_type: "UserRegistered"
+      - event_type: "UserLoggedIn"
+      - event_type: "UserPurchasedProducts"
+
+  ProductBrowseSpree:
+    description: "An existing logged-in user makes a purchase."
+    initiation_weight: 30
+    requires_initial_entities:
+      - name: "User"
+        alias: "active_user"
+        selection_filter:
+          - field: "state.is_logged_in"
+            operator: "equals"
+            value: true
+    steps:
+      - event_type: "UserPurchasedProducts"
+
+#-------------------------------------------------------------------------------
+# Output Configuration
+#-------------------------------------------------------------------------------
+outputs:
+  - type: "stdout"
+    enabled: true
+    format: "json_pretty"
+
+  - type: "file"
+    enabled: true
+    file_path: "output/ecommerce_events.json"
+    format: "json_pretty"
+
+  - type: "kafka"
+    enabled: false
+    topic_mapping:
+      UserRegistered: "user_events"
+      UserLoggedIn: "user_events"
+      ProductCreated: "product_events"
+      UserPurchasedProducts: "purchase_events"
+    default_topic: "events"
+    kafka_brokers: "localhost:9092"
