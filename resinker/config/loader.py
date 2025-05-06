@@ -97,7 +97,7 @@ class StateAttribute(BaseModel):
 
 class EntityDefinition(BaseModel):
     """Definition of an entity in the system."""
-    schema: str
+    schema_ref: str = Field(alias="schema")
     primary_key: str
     state_attributes: Dict[str, Dict[str, Any]] = Field(default_factory=dict)
 

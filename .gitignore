@@ -180,5 +180,3 @@ data/*
 
 # Ignore all files in the logs directory
 logs/*
-
-output/*

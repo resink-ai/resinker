@@ -1,0 +1,6571 @@
+[
+{
+  "event_type": "UserLoggedIn",
+  "payload": {
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "login_timestamp": "2025-05-06T09:11:07.570689",
+    "ip_address": "135.249.220.117",
+    "user_agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 4.0; Trident/5.1)"
+  },
+  "timestamp": "2025-05-06T09:11:07.570689"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "2fb45d5f-fc42-4685-88ef-99482c973cd9",
+    "full_name": "Michael Spencer",
+    "email": "robertbentley@example.net",
+    "password_hash": "$2a$10$c3c9311a87e9e8ace1f81c",
+    "registration_timestamp": "2025-05-06T09:11:12.850213",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:11:12.850213"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "1e0f6cd7-bd92-466e-b211-1eb9bc5ade31",
+    "full_name": "Matthew Harvey",
+    "email": "cardenaskaren@example.net",
+    "password_hash": "$2a$10$c54f3ffc74f830315ef36a",
+    "registration_timestamp": "2025-05-06T09:11:18.062814",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:11:18.062814"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "d58ac46b-3f81-4d7e-828b-006b01cab488",
+    "full_name": "Robert Dominguez",
+    "email": "pwilliams@example.org",
+    "password_hash": "$2a$10$32283d3cf4643c081fd948",
+    "registration_timestamp": "2025-05-06T09:11:23.318457",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:11:23.318457"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "b3fc0d91-5002-48f4-9ca4-902158d6cea1",
+    "full_name": "Richard Washington",
+    "email": "joshuajones@example.com",
+    "password_hash": "$2a$10$0efce5e33a8596c39c312a",
+    "registration_timestamp": "2025-05-06T09:11:23.551846",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:11:23.551846"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "b9bee58b-33fa-431e-9295-b2725eb11a62",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:11:24.308771",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:11:24.308771"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "85526515-5ae6-4990-86e8-951368b4e306",
+    "full_name": "Tommy Evans",
+    "email": "acastaneda@example.net",
+    "password_hash": "$2a$10$4bc8f56e44f477e1ad7aaa",
+    "registration_timestamp": "2025-05-06T09:11:30.451452",
+    "referral_code": "OqkVCJTB"
+  },
+  "timestamp": "2025-05-06T09:11:30.451452"
+},
+{
+  "event_type": "UserLoggedIn",
+  "payload": {
+    "user_id": "9c369d60-9802-4995-aa73-1c9869413f95",
+    "login_timestamp": "2025-05-06T09:11:35.337021",
+    "ip_address": "91.110.100.64",
+    "user_agent": "Mozilla/5.0 (X11; Linux i686; rv:1.9.5.20) Gecko/4625-07-19 16:55:11.562561 Firefox/3.8"
+  },
+  "timestamp": "2025-05-06T09:11:35.337021"
+},
+{
+  "event_type": "UserLoggedIn",
+  "payload": {
+    "user_id": "5b9be611-5998-4686-9258-0cbf7c0ab223",
+    "login_timestamp": "2025-05-06T09:11:36.437251",
+    "ip_address": "135.84.129.170",
+    "user_agent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_6_6; rv:1.9.4.20) Gecko/6610-08-13 12:45:09.943451 Firefox/3.8"
+  },
+  "timestamp": "2025-05-06T09:11:36.437251"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "db4c1499-e599-4ea8-af69-516ecceb4ccf",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:11:38.119320",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:11:38.119320"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "d0452af9-8831-4449-9283-e91154009214",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:11:42.940297",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:11:42.940297"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "3af4961e-e915-4483-af62-8dc5c252944f",
+    "name": "Lightweight Pet Shampoo",
+    "description": "Itself room environmental system store beautiful think during let particular her.",
+    "price": 20.4,
+    "tags": [
+      "sale"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:11:45.067080"
+  },
+  "timestamp": "2025-05-06T09:11:45.067080"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "54097459-a30b-4acd-bf27-a7f3431d2eaa",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:11:46.111872",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:11:46.111872"
+},
+{
+  "event_type": "UserLoggedIn",
+  "payload": {
+    "user_id": "2fdd4eba-4e9f-476b-937c-f8b20ffbddd2",
+    "login_timestamp": "2025-05-06T09:11:50.899612",
+    "ip_address": "84.205.8.57",
+    "user_agent": "Mozilla/5.0 (Android 10; Mobile; rv:49.0) Gecko/49.0 Firefox/49.0"
+  },
+  "timestamp": "2025-05-06T09:11:50.899612"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "1be8e630-de7e-49ed-9947-6246960b4030",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 110.16,
+    "purchase_timestamp": "2025-05-06T09:11:52.020967",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:11:52.020967"
+},
+{
+  "event_type": "UserLoggedIn",
+  "payload": {
+    "user_id": "cc499b16-2821-441d-b706-fb4aceadf112",
+    "login_timestamp": "2025-05-06T09:11:52.152732",
+    "ip_address": "125.1.111.247",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2; rv:1.9.5.20) Gecko/2974-12-02 08:09:26.576912 Firefox/7.0"
+  },
+  "timestamp": "2025-05-06T09:11:52.152732"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "56b469d1-e84f-4c1d-b3ef-bb63d50c1406",
+    "name": "Premium Sofa",
+    "description": "Box assume man officer rather charge specific we be easy newspaper indicate.",
+    "price": 37.34,
+    "tags": [
+      "eco-friendly"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:11:52.581821"
+  },
+  "timestamp": "2025-05-06T09:11:52.581821"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "6030ea05-38ef-4f42-bf2d-29747155accd",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:11:53.119673",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:11:53.119673"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "993f6934-853f-4a29-ac2c-bd86539ecb5a",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:11:56.550782",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:11:56.550782"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "a52d2ae7-d597-4521-9e5b-51d5fe7a7731",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:11:58.953260",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:11:58.953260"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "a3b216e7-71fd-482d-99a9-9ca86403d544",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 97.92,
+    "purchase_timestamp": "2025-05-06T09:11:59.125397",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:11:59.125397"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "64728bef-971c-41cc-8b73-c847c433d075",
+    "full_name": "Lisa Rowe",
+    "email": "chayes@example.com",
+    "password_hash": "$2a$10$be1146b1244da91650aa2f",
+    "registration_timestamp": "2025-05-06T09:12:05.349205",
+    "referral_code": "pRtoZmjb"
+  },
+  "timestamp": "2025-05-06T09:12:05.349205"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "fbb84ba9-255a-4316-83a2-31fdc951f134",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:12:12.789564",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:12:12.789564"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "8275b7f6-6df6-4a47-9f9f-a494b4458562",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:12:12.894877",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:12:12.894877"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "d43d36c1-2133-4137-ba47-5705670a39a1",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:12:13.253194",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:12:13.253194"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "f0231dc1-1436-463a-b4c0-aa9ebab0ba98",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:12:18.973948",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:12:18.973948"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "b03054ee-4e73-41d9-839a-6be7f48f4f4a",
+    "full_name": "Michael Warner",
+    "email": "ojones@example.com",
+    "password_hash": "$2a$10$7035099006ccb1229c7b05",
+    "registration_timestamp": "2025-05-06T09:12:20.299439",
+    "referral_code": "ECqWp1Or"
+  },
+  "timestamp": "2025-05-06T09:12:20.299439"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "d2f60df4-056e-46bf-af33-e0db571fea83",
+    "full_name": "Terri Mason",
+    "email": "mkim@example.org",
+    "password_hash": "$2a$10$6b34f8dfd545582b7b226b",
+    "registration_timestamp": "2025-05-06T09:12:21.598626",
+    "referral_code": "HFOprCeT"
+  },
+  "timestamp": "2025-05-06T09:12:21.598626"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "4875f03b-9f75-447d-8030-3f7fa9f3328f",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:12:32.553625",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:12:32.553625"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "6f8da32a-5c6f-45a5-b5ca-b7403b3cc1aa",
+    "full_name": "Robert Costa",
+    "email": "vbailey@example.com",
+    "password_hash": "$2a$10$6c1acdaed99e7f02b53ce2",
+    "registration_timestamp": "2025-05-06T09:12:35.366597",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:12:35.366597"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "6304c89a-d8d1-41f0-a827-0ed2b2f71528",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:12:41.527587",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:12:41.527587"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "d5e23780-25d1-4d05-8265-f2a6b9cab8cb",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:12:42.537383",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:12:42.537383"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "fce0b357-4cdb-4afe-8aaa-f49748cb3e50",
+    "full_name": "Cody Cox",
+    "email": "wgarrett@example.org",
+    "password_hash": "$2a$10$5046e4d9b208a241d98e60",
+    "registration_timestamp": "2025-05-06T09:12:46.834122",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:12:46.834122"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "8b5f2419-a330-49b9-a120-af63e7db7d22",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:12:51.085080",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:12:51.085080"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "2addceb2-0b60-4742-a95a-511d620992a9",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:12:52.488897",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:12:52.488897"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "c9889380-534e-475c-b1ef-a31e479030c3",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:12:53.289753",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:12:53.289753"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "6bed6024-00a8-4c3b-8a59-1a07baa2ea15",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:12:53.990847",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:12:53.990847"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "1c8419c5-66cd-4a74-9a7e-c9f964240a8c",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:12:57.654594",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:12:57.654594"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "65b252fc-44e2-4af5-a026-8babf3114250",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:13:00.550999",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:13:00.550999"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "4129885b-c9e0-49fa-87e7-6fd0dba654ed",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:13:19.095673",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:13:19.095673"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "fc090570-0504-4cb9-bf95-0f212212baaa",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:13:22.470713",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:13:22.470713"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "79a6d0b5-5173-4c82-9e0e-24fe51860500",
+    "full_name": "Dr. Jordan Hill PhD",
+    "email": "jsanchez@example.org",
+    "password_hash": "$2a$10$2802427e1dfc7fe9197ae5",
+    "registration_timestamp": "2025-05-06T09:13:22.575532",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:13:22.575532"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "53530eb9-bc69-4fd1-9f5e-e66118b08128",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:13:23.018256",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:13:23.018256"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "9ddef96f-a69f-4da7-bee7-7afc167126bc",
+    "name": "Smart Floor Mats",
+    "description": "Several help usually thank wonder draw him task improve fish list tree high.",
+    "price": 74.64,
+    "tags": [
+      "sale"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:13:25.195889"
+  },
+  "timestamp": "2025-05-06T09:13:25.195889"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "4e75b8ab-fed9-43cc-91bd-f68e69c7beac",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:13:28.269628",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:13:28.269628"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "56b0873f-e890-449b-9091-23d32da6d8c2",
+    "name": "Wireless Blender",
+    "description": "Maybe opportunity thank them key moment lead.",
+    "price": 43.77,
+    "tags": [
+      "new"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:13:30.734985"
+  },
+  "timestamp": "2025-05-06T09:13:30.734985"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "f518728b-3eeb-46d3-bd9f-18f3ee516072",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:13:31.358129",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:13:31.358129"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "0a9eb651-4245-4efe-83c3-e3beb41849fc",
+    "name": "Portable Blanket",
+    "description": "Avoid sit enter perhaps however bag forget.",
+    "price": 68.53,
+    "tags": [
+      "eco-friendly",
+      "eco-friendly",
+      "premium"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:13:33.007843"
+  },
+  "timestamp": "2025-05-06T09:13:33.007843"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "83bd6223-0400-4d01-9f93-249083757a7f",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:13:34.893682",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:13:34.893682"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "bad666b0-6a92-491d-a598-f9921bc314f5",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:13:36.274121",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:13:36.274121"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "742d039b-c5ab-4226-93a1-8fdbcddf9188",
+    "full_name": "Kimberly Finley",
+    "email": "cbrennan@example.net",
+    "password_hash": "$2a$10$0837b1d7b2c838126b1872",
+    "registration_timestamp": "2025-05-06T09:13:37.145745",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:13:37.145745"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "b92baeae-a2f9-4d66-a0fc-c1791ad206e6",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:13:41.992385",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:13:41.992385"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "5aaf2075-6400-4678-8d64-ea4014bed9c4",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:13:44.404109",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:13:44.404109"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "f699e3e7-e813-4050-8060-2d2c828d3f98",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:13:44.733839",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:13:44.733839"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "bd3396ff-6d39-457b-bb14-c3a9e985124a",
+    "full_name": "Jason Maldonado",
+    "email": "georgemiller@example.com",
+    "password_hash": "$2a$10$da05ff8ef17b91ae6285fc",
+    "registration_timestamp": "2025-05-06T09:13:46.454648",
+    "referral_code": "vwSDrtqo"
+  },
+  "timestamp": "2025-05-06T09:13:46.454648"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "f416abfe-79cd-414d-bb83-efc46bb81bfc",
+    "full_name": "Eric Kidd",
+    "email": "yrodriguez@example.net",
+    "password_hash": "$2a$10$57c0468c211a25e881061f",
+    "registration_timestamp": "2025-05-06T09:13:48.570224",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:13:48.570224"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "6b736c39-4485-40cf-bc4e-4123e3b4690e",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:13:51.973097",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:13:51.973097"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "a3ce1408-0999-495d-8110-bfd0a2872e42",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:13:56.692265",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:13:56.692265"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "5365f113-2fdd-4a17-bb23-4383eb2a3ece",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:13:59.782766",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:13:59.782766"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "669e43fd-f8d0-4deb-a125-db90744fc0ec",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:14:00.301776",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:00.301776"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "5b7460b8-e41a-4b04-9abd-8d90b4848e23",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:14:00.732439",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:00.732439"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "a49fc8e1-b6b5-4fa1-a179-08c99b2f7dcf",
+    "full_name": "David Campos",
+    "email": "courtneyberger@example.net",
+    "password_hash": "$2a$10$7abcafe567e5ff3af30c30",
+    "registration_timestamp": "2025-05-06T09:14:01.837127",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:14:01.837127"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "a14ba314-1806-4c07-aef2-9bc02472e3ed",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:14:02.444554",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:02.444554"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "0c2be61a-1c1f-4917-8f6f-bdf3111f1cc4",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:14:03.173186",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:03.173186"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "78c66f18-4240-4ddd-aff9-c349daee99e1",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:14:04.925445",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:04.925445"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "47d2523e-3a59-4f96-9b5c-00ee4fe36431",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:14:09.015275",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:09.015275"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "0959058a-8a70-45b1-b2b2-cf53eadba63c",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:14:12.468600",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:12.468600"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "49f62717-f26f-49af-b4db-693d6414d931",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:14:16.025098",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:16.025098"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "d7998448-0b8b-4512-8afe-04082d95452a",
+    "full_name": "Regina Mcdonald",
+    "email": "taylortammy@example.net",
+    "password_hash": "$2a$10$8847ba750f32dfb25702e9",
+    "registration_timestamp": "2025-05-06T09:14:17.474316",
+    "referral_code": "g8WnOnqQ"
+  },
+  "timestamp": "2025-05-06T09:14:17.474316"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "8b5da59e-6350-4440-b2e7-fb5350a6b15e",
+    "full_name": "Connie Brown",
+    "email": "tblankenship@example.net",
+    "password_hash": "$2a$10$d43923d898214e50303ce2",
+    "registration_timestamp": "2025-05-06T09:14:19.456256",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:14:19.456256"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "1c0468e8-3332-4fc2-bd55-d1b5ec37c290",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:14:24.685266",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:24.685266"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "36873193-ea66-4eb4-975d-e9d7fcf2598d",
+    "name": "Organic Car Charger",
+    "description": "Allow have kitchen wear talk between rate name within.",
+    "price": 63.54,
+    "tags": [
+      "eco-friendly",
+      "new"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:14:24.901035"
+  },
+  "timestamp": "2025-05-06T09:14:24.901035"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "513205e4-071d-4150-bf50-4ac66ac609a6",
+    "name": "Premium Bicycle",
+    "description": "Couple business summer lawyer production politics others again skill.",
+    "price": 46.22,
+    "tags": [
+      "premium",
+      "premium"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:14:26.736375"
+  },
+  "timestamp": "2025-05-06T09:14:26.736375"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "6a5f2022-5ca0-4703-b74a-f836047f847b",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:14:31.288737",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:31.288737"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "7452395e-ffec-48be-ba1d-957dd502139c",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:14:31.814893",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:31.814893"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "a3ac54a1-7d67-45a7-80cc-632704cca069",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:14:32.846408",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:32.846408"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "b641548e-e8e9-41dc-9958-9db6bb8fa94d",
+    "name": "Essential Books Journal",
+    "description": "Attention share debate democratic thank forget challenge too.",
+    "price": 47.04,
+    "tags": [
+      "sale",
+      "eco-friendly",
+      "premium"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:14:38.923120"
+  },
+  "timestamp": "2025-05-06T09:14:38.923120"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "408af6a2-5590-444a-8bd5-5576f744787c",
+    "full_name": "Scott Thomas",
+    "email": "amberlindsey@example.org",
+    "password_hash": "$2a$10$44465be7f0e4d4bcbc8453",
+    "registration_timestamp": "2025-05-06T09:14:39.708212",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:14:39.708212"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "3073849e-19b0-49ae-a6ab-600416fe6442",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:14:41.866006",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:41.866006"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "ef69fdd0-ac89-4b5f-8b2a-780e2451f862",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:14:42.078923",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:42.078923"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "4f661757-315a-45ae-8182-944e7ca5e44f",
+    "name": "Modern Keyboard",
+    "description": "Feeling poor all your suggest international blue Republican kitchen tonight focus chance.",
+    "price": 47.18,
+    "tags": [
+      "premium"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:14:43.346015"
+  },
+  "timestamp": "2025-05-06T09:14:43.346015"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "1d8b2ec1-2a8f-4e0b-85fa-390f6868ae90",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:14:48.458180",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:48.458180"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "87c460b6-705c-4e68-8399-c3d5cd8787ec",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:14:48.862590",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:48.862590"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "1e1853ae-0653-4182-92bc-da90c0e2572f",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:14:51.161305",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:51.161305"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "cabdce2c-5758-4d92-a81e-f50a47b3d861",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:14:56.401214",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:56.401214"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "496e46a7-3459-4e15-9323-378a2523f423",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:14:57.578424",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:14:57.578424"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "12e7a2c2-d191-44db-a7bd-1efd5286e4e5",
+    "full_name": "Marcus Richards",
+    "email": "oscar98@example.com",
+    "password_hash": "$2a$10$f1dba226eda18581d81dd7",
+    "registration_timestamp": "2025-05-06T09:14:59.165356",
+    "referral_code": "Av7YGr0a"
+  },
+  "timestamp": "2025-05-06T09:14:59.165356"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "abaf6bf8-a496-4902-b690-e6d3ff1ec6e6",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:15:00.847143",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:00.847143"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "87992f28-150a-49d9-91cd-4e9f3de414de",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:15:02.416305",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:02.416305"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "652342b0-f73e-447b-b3ee-95fed9ad98bb",
+    "name": "Smart Mascara",
+    "description": "Attack story behavior benefit school speech news only no form business government.",
+    "price": 39.91,
+    "tags": [
+      "eco-friendly",
+      "sale",
+      "featured"
+    ],
+    "status": "coming_soon",
+    "created_at": "2025-05-06T09:15:02.741384"
+  },
+  "timestamp": "2025-05-06T09:15:02.741384"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "8d2832b5-8291-4321-9a9f-87ffb569fff1",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:15:03.497505",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:03.497505"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "47da9402-4f95-41b9-a4ba-7159ab4090ae",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:15:04.975727",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:04.975727"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "afe47a24-0652-4813-b624-849b92404bc2",
+    "name": "Durable Toys Action Figure",
+    "description": "Outside goal official defense prevent difference board suddenly happen.",
+    "price": 66.08,
+    "tags": [
+      "new",
+      "sale",
+      "premium"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:15:05.110322"
+  },
+  "timestamp": "2025-05-06T09:15:05.110322"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "c30c9149-f639-47eb-979e-a6c722bd68d1",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:15:06.244647",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:06.244647"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "b5ccdb6e-7a10-40f4-8002-8e156309280c",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:15:08.193964",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:08.193964"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "7470c64c-dc40-4bba-93a1-ca9693c4ac1b",
+    "full_name": "Laura Aguirre",
+    "email": "lynchdiane@example.net",
+    "password_hash": "$2a$10$5d3ceb8dd49c154ac9b4f1",
+    "registration_timestamp": "2025-05-06T09:15:08.288550",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:15:08.288550"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "ee420ba8-cfb8-41e6-b79d-28ba4fc956c0",
+    "name": "Ultra Baseball Glove",
+    "description": "Other third choose senior anyone bank kitchen interest parent increase democratic mention generation.",
+    "price": 35.85,
+    "tags": [
+      "new"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:15:12.663182"
+  },
+  "timestamp": "2025-05-06T09:15:12.663182"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "3c602831-508a-44a9-a775-e977951b8c02",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:15:13.180375",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:13.180375"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "a756d442-ad94-44ff-baf9-85fe4d32116b",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:15:14.403335",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:14.403335"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "e330f84d-2f39-409f-b522-fd021e5db092",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:15:15.020287",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:15.020287"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "7363d05a-c987-47e0-adcd-b3a4f0557395",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:15:15.419909",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:15.419909"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "6da444d2-76dd-4faf-9402-8771ac6ce6dc",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:15:18.148540",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:18.148540"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "bcc203f7-129c-4591-a809-963aad310857",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:15:18.503707",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:18.503707"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "6f34b7aa-f23a-49ef-b022-1f7b5367ca40",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:15:20.379830",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:20.379830"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "84ec67f4-810f-436c-be6b-c4c2650c9571",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:15:22.685528",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:22.685528"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "ef77ff84-170e-4d7e-afa1-c2b73390e5a0",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:15:23.702149",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:23.702149"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "222bc4fc-e5ad-43af-95de-e7c32521a189",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:15:25.769516",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:25.769516"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "17d68e52-e919-4285-9c3c-407a5a2e3ead",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:15:28.971976",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:28.971976"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "c6078814-9db1-4db4-a313-b75af636edc6",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:15:30.887425",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:30.887425"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "3ec76dbe-0ee0-42a1-b6fd-0d45e06148e5",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 97.92,
+    "purchase_timestamp": "2025-05-06T09:15:31.387412",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:31.387412"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "83c78084-0a93-4ba3-9f33-55fa1fff5602",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:15:33.671744",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:33.671744"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "309d762d-23ff-4ea4-8df7-0c7cafa87759",
+    "full_name": "Michael Watkins",
+    "email": "brandon69@example.org",
+    "password_hash": "$2a$10$33dbd006b36ac2a8d5a17d",
+    "registration_timestamp": "2025-05-06T09:15:35.979770",
+    "referral_code": "9ZsV3vZh"
+  },
+  "timestamp": "2025-05-06T09:15:35.979770"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "36287108-be4b-42d8-8a4f-4b71c6e5b5c8",
+    "full_name": "Shannon Johnston",
+    "email": "amckinney@example.com",
+    "password_hash": "$2a$10$8f937c16f50cc7854ebe2f",
+    "registration_timestamp": "2025-05-06T09:15:37.149160",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:15:37.149160"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "01d2259e-734b-4f03-884c-2dcb9cd7e744",
+    "full_name": "Ashley Hicks",
+    "email": "michael23@example.org",
+    "password_hash": "$2a$10$c207fbd25f2c4e809b8731",
+    "registration_timestamp": "2025-05-06T09:15:39.008202",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:15:39.008202"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "bc375be6-c6f9-4ba2-8570-8aa7c22bee0a",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:15:39.678848",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:39.678848"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "7fb1b3e7-f5e9-4b38-8b6a-19c28c667dd8",
+    "name": "Deluxe Car Charger",
+    "description": "Place someone option goal avoid left also hard expert popular within.",
+    "price": 97.04,
+    "tags": [
+      "new",
+      "eco-friendly"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:15:44.387848"
+  },
+  "timestamp": "2025-05-06T09:15:44.387848"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "af335eea-178d-4ae7-a57c-74e254b3e6da",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:15:44.889585",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:44.889585"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "8b5f1a86-ce4c-4684-9141-43dad5b2a9bc",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:15:48.540216",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:48.540216"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "972212e2-4a12-404d-b86c-e16a0e6cdd48",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:15:50.108923",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:50.108923"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "93b44436-3fa4-4873-8fe7-144e34c1b37a",
+    "full_name": "Kirk Cruz",
+    "email": "colelisa@example.net",
+    "password_hash": "$2a$10$c49e33f224dac724fbfe10",
+    "registration_timestamp": "2025-05-06T09:15:51.501778",
+    "referral_code": "S8IALVUj"
+  },
+  "timestamp": "2025-05-06T09:15:51.501778"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "6978da81-696d-4f9d-a93f-083185473668",
+    "full_name": "Raymond Shelton",
+    "email": "mccormickdeborah@example.org",
+    "password_hash": "$2a$10$94d30f8e89dc1f1d32d819",
+    "registration_timestamp": "2025-05-06T09:15:53.006674",
+    "referral_code": "Pg1FNA88"
+  },
+  "timestamp": "2025-05-06T09:15:53.006674"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "dfadbceb-4a23-4d27-a47c-8ae45d2e5d31",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:15:54.059396",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:54.059396"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "3157224a-8cf0-472e-bfc7-f5d044d6bf6a",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:15:54.118142",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:54.118142"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "466de489-9811-4733-9ce3-76f77be84702",
+    "full_name": "James Conner",
+    "email": "elizabethcalderon@example.net",
+    "password_hash": "$2a$10$af24a13e9dacb4e3064190",
+    "registration_timestamp": "2025-05-06T09:15:55.302576",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:15:55.302576"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "cd8ebfff-0f16-4bca-836b-965d93fe18e6",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 97.92,
+    "purchase_timestamp": "2025-05-06T09:15:57.608048",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:57.608048"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "1d1fedcd-72bc-4ba7-9466-4748653b4335",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:15:58.298506",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:58.298506"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "aebd4ddc-525a-47e5-a18c-05658b290386",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:15:59.431178",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:15:59.431178"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "21aefffb-de4c-44c3-8928-c2e841df9070",
+    "full_name": "Ralph Anderson",
+    "email": "lmoore@example.net",
+    "password_hash": "$2a$10$766acacbe2d783e139683e",
+    "registration_timestamp": "2025-05-06T09:16:00.778390",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:16:00.778390"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "b3ea0611-6f64-417f-8ccf-1a00d6f2d8bb",
+    "name": "Wireless Automotive Air Freshener",
+    "description": "Sing me industry class current painting their appear lose.",
+    "price": 81.09,
+    "tags": [
+      "premium"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:16:01.644996"
+  },
+  "timestamp": "2025-05-06T09:16:01.644996"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "d0e63376-3be7-4f33-b818-6e69ca213322",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:16:02.311188",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:02.311188"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "ad36af2e-5de0-4938-b828-0db141cebd43",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:16:02.893479",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:02.893479"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "347cd1c3-4f5f-4649-921c-c87deeb11ca2",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:16:03.511814",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:03.511814"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "931303ee-3076-47e9-98e3-dc7099e8853f",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:16:03.859128",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:03.859128"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "f0fc7b78-b493-4e30-818b-1235f6bb0205",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:16:06.365946",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:06.365946"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "03c43e22-b10c-4aa8-a134-42cf6495d1c8",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:16:08.042285",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:08.042285"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "93402794-3853-4109-bcb1-c4b33c8ef3c5",
+    "name": "Digital Dumbbells",
+    "description": "Surface expect several evening town challenge join watch develop later glass ago.",
+    "price": 88.98,
+    "tags": [
+      "eco-friendly"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:16:09.761128"
+  },
+  "timestamp": "2025-05-06T09:16:09.761128"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "837a4058-1345-4bc1-8035-161f20a4cdc3",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:16:12.147942",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:12.147942"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "9ec21740-23f5-4219-a3c5-ff83d780eda8",
+    "full_name": "Jonathan Young",
+    "email": "brooksanthony@example.org",
+    "password_hash": "$2a$10$92432c221fba01f234c4e0",
+    "registration_timestamp": "2025-05-06T09:16:12.642129",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:16:12.642129"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "debc0dff-a22c-4107-9d04-a9193716fdef",
+    "full_name": "Dwayne Turner",
+    "email": "allendanielle@example.net",
+    "password_hash": "$2a$10$1874d2aabb5e6584310330",
+    "registration_timestamp": "2025-05-06T09:16:15.231106",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:16:15.231106"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "94c2a4af-72b7-4c8a-b660-2e5828a5e3e3",
+    "name": "Premium Automotive Tool Kit",
+    "description": "Wonder effect administration small general run pick sign same forward.",
+    "price": 48.4,
+    "tags": [
+      "sale",
+      "featured"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:16:15.790400"
+  },
+  "timestamp": "2025-05-06T09:16:15.790400"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "2dec93ac-3461-413d-8833-ad392169ba17",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:16:16.735394",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:16.735394"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "4897dffa-72bb-4a4a-b8c8-ef525f5ca537",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:16:19.573078",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:19.573078"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "0c3dd153-a8b7-4f1c-9ded-8b111f8f1530",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:16:19.849434",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:19.849434"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "95d38731-0bfb-4158-9e8c-bf01d46bcd0d",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:16:22.419816",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:22.419816"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "2712d132-fff5-42da-8fa5-0ed3c77656b5",
+    "full_name": "Joshua Li",
+    "email": "mariacohen@example.net",
+    "password_hash": "$2a$10$a6de1bc254fa5fd8056893",
+    "registration_timestamp": "2025-05-06T09:16:23.034549",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:16:23.034549"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "63858541-0867-42db-a588-d143527aaa1e",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:16:24.855426",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:24.855426"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "5d5e5163-c7ad-4019-83f7-6ee4fe27e3e1",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:16:25.808218",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:25.808218"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "ff441976-9074-4b79-884f-8b6866a7edfa",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:16:26.097034",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:26.097034"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "1b8319e2-3a2a-4274-91b5-3f5b1f735951",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:16:27.504992",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:27.504992"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "02729328-eaf1-4543-846b-f4d69be941bd",
+    "full_name": "Amber Rios",
+    "email": "david56@example.com",
+    "password_hash": "$2a$10$c4018159b899d67919b12b",
+    "registration_timestamp": "2025-05-06T09:16:27.926352",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:16:27.926352"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "ad500210-d88a-428d-bb51-b7ae15592b4a",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:16:29.044515",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:29.044515"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "60de40ea-e313-4387-931f-080f3ca35399",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:16:30.378591",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:30.378591"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "f75f9d8b-4bdc-4b77-92f2-a03f903522b5",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 97.92,
+    "purchase_timestamp": "2025-05-06T09:16:32.354936",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:32.354936"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "24267578-908b-4229-98d2-33324d23139e",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:16:33.548974",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:33.548974"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "1a5c490a-7719-4b8d-8d9c-7ee460cb7ad9",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:16:34.191948",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:34.191948"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "5dd1e404-76d6-450b-90e6-7008b68018e4",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:16:34.923182",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:34.923182"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "b1c17f7e-a74e-464f-b198-be589007f90c",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:16:35.413794",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:35.413794"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "751d1cf8-5ebd-41db-a089-7c241505939d",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:16:35.837542",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:35.837542"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "99bad5b3-2f37-4d93-afa2-e11dd36d698f",
+    "full_name": "Lance Simmons",
+    "email": "cbell@example.net",
+    "password_hash": "$2a$10$065927ecc1627e0e56825e",
+    "registration_timestamp": "2025-05-06T09:16:39.795184",
+    "referral_code": "GJ1QZwez"
+  },
+  "timestamp": "2025-05-06T09:16:39.795184"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "6ec216d2-8e6a-42f9-8c4d-8d1062effaf4",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:16:41.267355",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:41.267355"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "dfcc66b9-48af-4ee6-9412-b96efe67b38c",
+    "full_name": "James Bradley",
+    "email": "erikarush@example.com",
+    "password_hash": "$2a$10$7a72a7b4ea3da0854c20e0",
+    "registration_timestamp": "2025-05-06T09:16:43.184884",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:16:43.184884"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "85fa897b-7813-47e3-8c2e-1b9c2985f292",
+    "name": "Deluxe Biography",
+    "description": "Later together knowledge because radio suffer.",
+    "price": 16.86,
+    "tags": [],
+    "status": "available",
+    "created_at": "2025-05-06T09:16:44.125975"
+  },
+  "timestamp": "2025-05-06T09:16:44.125975"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "b645e478-ce49-4dce-aa01-7946a9817ff6",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:16:45.730875",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:45.730875"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "a04a866e-cfa7-446e-ab5a-f08f0360f065",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:16:48.433470",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:48.433470"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "79204749-02b6-4da4-b397-7a1e6cb6ad36",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:16:49.253054",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:49.253054"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "3b2de618-62fa-43a2-a9be-4b2c1ae99b54",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:16:49.775969",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:49.775969"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "455a5bc8-c663-457e-8588-246383a6b718",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 97.92,
+    "purchase_timestamp": "2025-05-06T09:16:49.956684",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:49.956684"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "909ef2a0-abc8-477a-bbba-ad33ef3e2508",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 110.16,
+    "purchase_timestamp": "2025-05-06T09:16:50.398760",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:50.398760"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "3fc10da9-924c-465e-80ae-b7135266c2f1",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:16:52.245589",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:52.245589"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "00d81100-649f-4356-9393-c38a1bde88aa",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:16:52.311227",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:52.311227"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "6900e499-b892-4a24-92af-252fe70dd231",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:16:55.834564",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:55.834564"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "bd6fa271-a2c8-4d44-928f-f15434666d8e",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:16:58.315751",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:58.315751"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "2bfca5d2-5e67-4066-bd6b-e04e922d34e5",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:16:58.584336",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:16:58.584336"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "3d669686-2b51-4a21-b7bb-4cba0471d907",
+    "full_name": "Gregory Brown",
+    "email": "patricia22@example.com",
+    "password_hash": "$2a$10$ac5661e6a22b7e8e2f12c9",
+    "registration_timestamp": "2025-05-06T09:17:01.584995",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:17:01.584995"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "a1c9387b-734a-443c-b18f-6594e401bf73",
+    "full_name": "William Day",
+    "email": "howens@example.com",
+    "password_hash": "$2a$10$e237f1e34bca36a1f0890d",
+    "registration_timestamp": "2025-05-06T09:17:01.910717",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:17:01.910717"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "ec043504-ef7b-4e7f-bfa9-cbfb16a32a59",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:17:01.968280",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:01.968280"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "e8c16428-731f-4d4a-93d1-d10c4758dd67",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:17:02.214241",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:02.214241"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "e6e6c349-1e8a-46be-b773-dd793294fd51",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:17:02.652531",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:02.652531"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "2c2969e4-0e02-4f2c-9f57-ef0934ccf743",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:17:04.054538",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:04.054538"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "c180e19d-00ac-4585-b8e3-21231405ee35",
+    "full_name": "Denise Weber",
+    "email": "shawgary@example.net",
+    "password_hash": "$2a$10$c784d894d909331f000fab",
+    "registration_timestamp": "2025-05-06T09:17:04.554007",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:17:04.554007"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "b47ba69d-60c7-4162-9e69-b8cb8e52ba68",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:17:05.511848",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:05.511848"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "be4edb21-db65-4be9-bf6e-321116cca2c7",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:17:07.683685",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:07.683685"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "cd628144-49bf-4184-b5d4-2f74b25fd21a",
+    "full_name": "Tyler Webb",
+    "email": "eevans@example.net",
+    "password_hash": "$2a$10$fb2799c2340909b58ba6e8",
+    "registration_timestamp": "2025-05-06T09:17:08.974656",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:17:08.974656"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "d3bf9d76-60cd-4a89-9e0c-7bbbc5481555",
+    "name": "Deluxe Blender",
+    "description": "War ten industry while total spend value return couple.",
+    "price": 40.75,
+    "tags": [
+      "featured",
+      "featured",
+      "featured"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:17:09.534007"
+  },
+  "timestamp": "2025-05-06T09:17:09.534007"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "713c3283-9a08-4e18-a586-b529310f7d2e",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:17:12.278069",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:12.278069"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "9abb310b-72a9-44b9-8c2d-34d6e3d5e1ed",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:17:12.622283",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:12.622283"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "ea9050d7-30de-40bd-af6a-031bbb6a1c98",
+    "full_name": "Zachary Owens",
+    "email": "tyler16@example.net",
+    "password_hash": "$2a$10$3f5ec7e8077a3d0f906c16",
+    "registration_timestamp": "2025-05-06T09:17:13.345922",
+    "referral_code": "iMyjkl1S"
+  },
+  "timestamp": "2025-05-06T09:17:13.345922"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "3e77bff3-c023-4b8f-8090-0fb51577f40a",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:17:14.075010",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:14.075010"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "519afec7-9835-4d55-8757-a2686001548b",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:17:14.207814",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:14.207814"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "3f987879-3753-4b7c-a48b-40aabf3bbecb",
+    "full_name": "Heidi Roberts",
+    "email": "wgordon@example.net",
+    "password_hash": "$2a$10$0eb7b341d983959d0d9370",
+    "registration_timestamp": "2025-05-06T09:17:14.376382",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:17:14.376382"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "8c54c491-5502-4c88-9c29-45c777e5b860",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:17:15.958134",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:15.958134"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "ab4919f4-63d0-4b10-b460-90724ac93c34",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:17:22.022999",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:22.022999"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "7a4e973e-dd22-48cb-ae5c-b7ca86110709",
+    "full_name": "Kaylee Murphy",
+    "email": "francisco94@example.net",
+    "password_hash": "$2a$10$77ed9c517e4f814d25a2e8",
+    "registration_timestamp": "2025-05-06T09:17:23.724053",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:17:23.724053"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "79900c2a-6778-4c21-8d77-e007ef16aab8",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:17:28.497213",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:28.497213"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "fc65e4b0-2330-4135-93ce-ef392684aca9",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:17:30.660618",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:30.660618"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "02b847e1-eea3-4f86-a1b9-f7d30e0c6a94",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:17:34.338094",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:34.338094"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "2fa69ea1-f161-4f42-a3a1-63c2031892de",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:17:34.770150",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:34.770150"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "4b99f1ac-f442-4c30-affe-99a6694c4c61",
+    "name": "Organic TV",
+    "description": "Modern return simple herself start drug occur red.",
+    "price": 12.53,
+    "tags": [],
+    "status": "discontinued",
+    "created_at": "2025-05-06T09:17:37.731875"
+  },
+  "timestamp": "2025-05-06T09:17:37.731875"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "4d994357-e3d9-483e-8a0d-7aa82be21b8e",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:17:38.295732",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:38.295732"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "0dfed857-0c89-49e2-8e48-788884a2265e",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:17:38.611089",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:38.611089"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "135990fa-43fa-469d-bbd3-b9499ae62301",
+    "full_name": "Jeremy Barnes",
+    "email": "avaughn@example.net",
+    "password_hash": "$2a$10$b6518182bebda17be78073",
+    "registration_timestamp": "2025-05-06T09:17:41.603672",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:17:41.603672"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "afbd8ff0-6cca-4174-a15c-8e8401453fbb",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:17:44.852932",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:44.852932"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "b485736d-df79-46b5-a87e-cfc438d79335",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:17:46.810701",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:46.810701"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "60803e1b-e09e-4c73-b9b5-3d397d51896a",
+    "full_name": "Dr. Douglas Evans",
+    "email": "kellie37@example.com",
+    "password_hash": "$2a$10$fc8817a5138424006fccad",
+    "registration_timestamp": "2025-05-06T09:17:49.202928",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:17:49.202928"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "a9dfa483-7520-421e-9a66-ba6e9b464f69",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:17:49.343790",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:49.343790"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "b1e7beb1-86b6-4ade-8a89-9849c5126f5a",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:17:50.669725",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:50.669725"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "54ce47d3-640d-4f90-8269-f8d1bec1c211",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:17:54.122216",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:54.122216"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "6f655aa6-a0fd-4e6c-b937-4977d82f8461",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:17:55.030963",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:55.030963"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "1bc883a2-6cd1-4521-bd85-751157f7d7c4",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:17:55.568237",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:17:55.568237"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "c75bdc2b-2d16-4f1e-af27-dfb81ae41308",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:18:06.275796",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:06.275796"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "a7746555-da94-4988-84a7-f5985dd4eeed",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:18:06.825163",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:06.825163"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "06c16189-8610-45f0-aff6-5de6320b225a",
+    "full_name": "Dale Ryan",
+    "email": "derrick99@example.org",
+    "password_hash": "$2a$10$a5567e11c998f693dc390c",
+    "registration_timestamp": "2025-05-06T09:18:08.301189",
+    "referral_code": "EqcWPmsw"
+  },
+  "timestamp": "2025-05-06T09:18:08.301189"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "017623bb-6668-4f15-b8fd-a633f7751e9c",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:18:13.857989",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:13.857989"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "2414fd94-b5ed-41b3-9652-1811a0ee1a50",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:18:15.226765",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:15.226765"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "2ce6a37a-a8a8-496a-85db-98679adf7288",
+    "name": "Ultra Yoga Mat",
+    "description": "Present discussion school sure also TV individual.",
+    "price": 49.57,
+    "tags": [
+      "sale",
+      "featured",
+      "eco-friendly"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:18:18.918102"
+  },
+  "timestamp": "2025-05-06T09:18:18.918102"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "a7dc1b6d-3e6e-495a-95d1-04b34ba8b3fc",
+    "full_name": "Taylor Johnson",
+    "email": "lfrench@example.net",
+    "password_hash": "$2a$10$5fa7139a23ad1319f5f5f8",
+    "registration_timestamp": "2025-05-06T09:18:22.054938",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:18:22.054938"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "e87b7d4e-450b-4257-858b-46c31f1ed83f",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:18:22.588903",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:22.588903"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "2a9e692e-8716-43a2-b28c-017029c3b079",
+    "name": "Modern Mascara",
+    "description": "Say so nothing serious compare task.",
+    "price": 99.55,
+    "tags": [
+      "premium"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:18:23.947109"
+  },
+  "timestamp": "2025-05-06T09:18:23.947109"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "32ee4682-e427-4b32-83fb-9fc41ce0f588",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:18:24.148019",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:24.148019"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "72b45748-3aa3-442a-af46-a6884c9f584a",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:18:24.924904",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:24.924904"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "86731187-ed60-47fe-86f8-210a7e3da323",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:18:26.273145",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:26.273145"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "337e3e1c-01c8-4194-a58e-546ebabf2bfa",
+    "full_name": "Samantha Robertson",
+    "email": "moralescody@example.org",
+    "password_hash": "$2a$10$4395d6f9df67904c6559f3",
+    "registration_timestamp": "2025-05-06T09:18:29.840548",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:18:29.840548"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "65d1f1e8-66ea-4715-b3cf-049829764b61",
+    "full_name": "Melissa Fowler",
+    "email": "michael33@example.org",
+    "password_hash": "$2a$10$30f4c4708bdcecc98fd45a",
+    "registration_timestamp": "2025-05-06T09:18:31.034590",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:18:31.034590"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "60a8c537-ba0b-406b-be79-67a1b92e3cb8",
+    "name": "Deluxe Dog Food",
+    "description": "Total dark Mr clearly take kind quite response major together knowledge argue car.",
+    "price": 64.45,
+    "tags": [
+      "sale",
+      "sale",
+      "eco-friendly"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:18:31.971778"
+  },
+  "timestamp": "2025-05-06T09:18:31.971778"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "64ef2dad-3142-4073-a173-eb1d517b4f8c",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:18:35.020825",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:35.020825"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "be3d22e6-ab14-46e9-9907-1e010a375e79",
+    "full_name": "Justin Hansen",
+    "email": "jennifer64@example.org",
+    "password_hash": "$2a$10$6716496a259feb6d4cdeff",
+    "registration_timestamp": "2025-05-06T09:18:35.270700",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:18:35.270700"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "4829919e-7a42-4678-913f-1b1f93d43ef1",
+    "full_name": "Susan Bennett",
+    "email": "desireebailey@example.org",
+    "password_hash": "$2a$10$a2f4a4c3e775ce0dc1f1bc",
+    "registration_timestamp": "2025-05-06T09:18:36.877313",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:18:36.877313"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "375da9bf-4c45-41a4-a773-65414f831d1a",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:18:37.195989",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:37.195989"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "10d93525-9988-41e2-8588-0db027c394b0",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:18:38.039636",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:38.039636"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "8e8f3b1b-691d-4d9e-bdc9-10aeb287dac1",
+    "name": "Organic Toys Action Figure",
+    "description": "Deal beyond almost our reflect any scientist I doctor.",
+    "price": 79.74,
+    "tags": [
+      "featured",
+      "premium",
+      "sale"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:18:38.742208"
+  },
+  "timestamp": "2025-05-06T09:18:38.742208"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "2be6e66e-feb9-4928-9e50-5a3612cf067d",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:18:40.890636",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:40.890636"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "a435f28a-70de-4c54-b3b2-bb8665768b12",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:18:41.058569",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:41.058569"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "9688bcac-fd49-4c0b-8b48-dca8f1d0d5e6",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:18:41.163926",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:41.163926"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "7b9cd41b-0199-4107-9560-d8abcd8b992b",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:18:42.742395",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:42.742395"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "7ee8242d-8560-4fd0-8f79-96189796636f",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:18:43.591161",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:43.591161"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "196bc26b-ba05-45ef-904e-85d1844cf749",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 97.92,
+    "purchase_timestamp": "2025-05-06T09:18:44.374472",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:44.374472"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "33f8180a-1b54-4a07-a5fb-afb8da49c083",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:18:45.016604",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:45.016604"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "acd70a92-a054-4b6e-aa96-a69fb35cbcc3",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:18:46.338318",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:46.338318"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "7659b586-f12b-4cbc-9656-475b8f4c9ce6",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:18:46.410753",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:46.410753"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "1712dfe6-dc47-4bb7-8b40-1972dbc6bf93",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:18:47.207901",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:47.207901"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "21526d87-124f-47e6-8f0b-d176e533ed3e",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:18:48.549992",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:48.549992"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "d7f0e50d-f75e-4e80-94a6-6a309e3f1036",
+    "full_name": "Scott Brown",
+    "email": "jim95@example.net",
+    "password_hash": "$2a$10$cafaf3d0b811bb2da115e9",
+    "registration_timestamp": "2025-05-06T09:18:49.245131",
+    "referral_code": "Mv17Kc03"
+  },
+  "timestamp": "2025-05-06T09:18:49.245131"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "70077d50-f245-4fcf-aaae-4a864eed8989",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:18:49.483631",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:49.483631"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "1b435546-1725-4f67-bc5b-e64099cad3f3",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 97.92,
+    "purchase_timestamp": "2025-05-06T09:18:50.134623",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:50.134623"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "83de6aac-458f-45d3-b2bf-e1715fa29450",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 97.92,
+    "purchase_timestamp": "2025-05-06T09:18:50.227429",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:50.227429"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "255325f2-e418-4ea4-b2b1-2cb6225b7977",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 97.92,
+    "purchase_timestamp": "2025-05-06T09:18:51.228997",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:51.228997"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "d0252e7a-5250-44f1-aa7c-976c27accb02",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:18:52.396301",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:52.396301"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "41c4944e-9caf-424d-9a39-9ed6057c0285",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:18:53.811145",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:53.811145"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "9367d6b8-d6eb-4542-bc13-3ba851599533",
+    "name": "Modern Bicycle",
+    "description": "Chance heavy senior list support feeling remain south trip none whose.",
+    "price": 53.57,
+    "tags": [
+      "sale"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:18:55.383045"
+  },
+  "timestamp": "2025-05-06T09:18:55.383045"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "2d8630c4-b834-4db0-96d9-2be6076758c4",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:18:55.523669",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:55.523669"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "1bf5131e-c17c-4a76-809a-a8566ae20beb",
+    "full_name": "Brandi Sanchez",
+    "email": "markmiller@example.com",
+    "password_hash": "$2a$10$ae0ca557d2870ecb993e75",
+    "registration_timestamp": "2025-05-06T09:18:57.613548",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:18:57.613548"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "75362a4c-c682-479a-8c73-0b3472c59ecc",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:18:57.913771",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:18:57.913771"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "9b30be40-c196-494e-bb16-3c6f57d1bfa4",
+    "full_name": "Zachary Mendoza",
+    "email": "heatherpadilla@example.com",
+    "password_hash": "$2a$10$f08b50026eaa78dfe21502",
+    "registration_timestamp": "2025-05-06T09:18:59.779700",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:18:59.779700"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "d1ee0ef0-0a0a-4014-aab2-cb783e72ea55",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:19:00.780376",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:00.780376"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "acf26033-139f-4334-b599-298f86eacaf8",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:19:03.291667",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:03.291667"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "b5327f35-a56e-436a-b919-e61d6d51fff7",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:19:03.791006",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:03.791006"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "7c5e4263-dfc2-49fa-bb12-4ad6c1cc21c9",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:19:08.221822",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:08.221822"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "3d966681-e775-425f-890b-0479c1639be1",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:19:08.678581",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:08.678581"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "08b280b0-d84c-4b7a-b67e-cbdf01ea3f85",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:19:09.366679",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:09.366679"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "69a8c32a-7963-4fd8-9069-f7b3f915525a",
+    "full_name": "Natalie Smith",
+    "email": "mphillips@example.com",
+    "password_hash": "$2a$10$8b77648340ac53e56cd009",
+    "registration_timestamp": "2025-05-06T09:19:10.217299",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:19:10.217299"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "b4ce8a79-7d2c-4ec9-b859-e3b19bbd5dec",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:19:11.356309",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:11.356309"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "758e67db-1269-4667-96e8-f4d50d6bf57e",
+    "full_name": "Kelly Combs",
+    "email": "landryelizabeth@example.org",
+    "password_hash": "$2a$10$b4392d7af7b09e9813ee1b",
+    "registration_timestamp": "2025-05-06T09:19:11.766332",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:19:11.766332"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "6b779f1e-531e-441e-9854-7d873782b04b",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:19:11.939716",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:11.939716"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "4cd035b4-3011-41f5-afda-40c493893f3f",
+    "full_name": "Donna Shaw",
+    "email": "ldrake@example.org",
+    "password_hash": "$2a$10$3487a37be8ef8f3f301d38",
+    "registration_timestamp": "2025-05-06T09:19:14.737184",
+    "referral_code": "iu7NukzN"
+  },
+  "timestamp": "2025-05-06T09:19:14.737184"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "83e68c1a-0bd4-4791-a501-b1deb60a7268",
+    "name": "Portable Art Set",
+    "description": "Pm reflect bar suddenly population former.",
+    "price": 36.92,
+    "tags": [
+      "premium",
+      "premium"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:19:15.119388"
+  },
+  "timestamp": "2025-05-06T09:19:15.119388"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "9abe6b7f-d782-4a7f-9c81-1b2a8c8008f8",
+    "full_name": "Valerie Jacobson",
+    "email": "hallrachel@example.net",
+    "password_hash": "$2a$10$c325585f357b062d798b4e",
+    "registration_timestamp": "2025-05-06T09:19:16.216548",
+    "referral_code": "tE0bxvRh"
+  },
+  "timestamp": "2025-05-06T09:19:16.216548"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "1cc264cf-e8e1-44c3-b837-9e68d5df1ebf",
+    "full_name": "Ruben Price",
+    "email": "patrick21@example.net",
+    "password_hash": "$2a$10$a3c6c8aed1ff2ef8a1f2a4",
+    "registration_timestamp": "2025-05-06T09:19:18.558938",
+    "referral_code": "LtY5U3SO"
+  },
+  "timestamp": "2025-05-06T09:19:18.558938"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "14c3fa83-0c0a-4d74-bf63-8e997683c71d",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:19:19.810982",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:19.810982"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "03d8e079-3e33-4aa1-950a-d42f2653df95",
+    "name": "Deluxe Plush Toy",
+    "description": "Require bank child Republican plant science first blood accept.",
+    "price": 80.45,
+    "tags": [
+      "new"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:19:19.958196"
+  },
+  "timestamp": "2025-05-06T09:19:19.958196"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "ec767efd-f7aa-4c87-9e8b-a497a26a137e",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:19:23.872426",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:23.872426"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "e02b9238-b838-4b60-a4cf-8a7d574eec7d",
+    "name": "Wireless Conditioner",
+    "description": "Bill beautiful issue news mention billion bed never others.",
+    "price": 57.28,
+    "tags": [
+      "featured",
+      "eco-friendly"
+    ],
+    "status": "coming_soon",
+    "created_at": "2025-05-06T09:19:33.599048"
+  },
+  "timestamp": "2025-05-06T09:19:33.599048"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "eecd39e1-7f9c-4bd5-aa6f-ab801a42d2d1",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:19:34.418730",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:34.418730"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "f6142bbc-94c7-469f-9a6c-6f76dd633e3a",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 110.16,
+    "purchase_timestamp": "2025-05-06T09:19:35.334220",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:35.334220"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "4071136a-2e86-4982-b9a5-f5daae6e29ca",
+    "full_name": "Sharon Smith",
+    "email": "fhughes@example.net",
+    "password_hash": "$2a$10$c7b1e1a7c64b22912cc23e",
+    "registration_timestamp": "2025-05-06T09:19:37.525592",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:19:37.525592"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "4fca5ebd-d0cc-4d50-ab3a-77f9d585ba70",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:19:38.263576",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:38.263576"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "0e1524fd-9ef0-4e58-8a62-d20da41aaa3e",
+    "full_name": "Chad Smith",
+    "email": "ncook@example.com",
+    "password_hash": "$2a$10$1ba1894ea13ddb84b91394",
+    "registration_timestamp": "2025-05-06T09:19:39.364263",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:19:39.364263"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "c6a36b68-56a4-4787-a2a1-155d4e2a14cb",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:19:45.703761",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:45.703761"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "fc5e899b-bea9-491c-837d-cd879432e9b5",
+    "full_name": "Robert Long",
+    "email": "frederickjames@example.net",
+    "password_hash": "$2a$10$b439d06d448c560d3150ec",
+    "registration_timestamp": "2025-05-06T09:19:46.212750",
+    "referral_code": "uEwJ77YU"
+  },
+  "timestamp": "2025-05-06T09:19:46.212750"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "fdb71859-ac2f-4328-a410-5d9cd2b7a0bc",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:19:46.793927",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:46.793927"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "f0ba0956-04eb-41aa-9cee-eef812564d2c",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:19:48.091666",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:48.091666"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "86b07fdc-d5d8-4ea6-8968-274d73bf1d58",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:19:51.836571",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:51.836571"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "166a7e0a-d21d-4a21-ae1c-22b9fb74a7ef",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:19:52.888865",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:52.888865"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "f888c0d5-9c19-4a5c-ad4c-e921b543674b",
+    "full_name": "Karen Morales DDS",
+    "email": "ystephens@example.com",
+    "password_hash": "$2a$10$7fb0ee66c361cc85241c98",
+    "registration_timestamp": "2025-05-06T09:19:53.305900",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:19:53.305900"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "b41af571-3636-4ec4-8e9b-4ea45e11d2d6",
+    "full_name": "Kelly Carpenter",
+    "email": "seanmyers@example.net",
+    "password_hash": "$2a$10$697304e4a1eb34e84d9a94",
+    "registration_timestamp": "2025-05-06T09:19:54.135458",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:19:54.135458"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "7164055d-1728-4bcf-81f6-60ba39b22aef",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:19:54.545958",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:54.545958"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "8047afa4-03b9-4c00-9d7a-891855adf4cc",
+    "full_name": "Andrew Page",
+    "email": "sweeneydeborah@example.net",
+    "password_hash": "$2a$10$c608fd7a48dba3ba83e5bc",
+    "registration_timestamp": "2025-05-06T09:19:55.778479",
+    "referral_code": "usPd6XfP"
+  },
+  "timestamp": "2025-05-06T09:19:55.778479"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "816eddc0-b07d-41df-9fad-fc6e74db35c8",
+    "name": "Ultra Cookbook",
+    "description": "Big the cost for leader energy television month police others particularly only girl.",
+    "price": 58.15,
+    "tags": [],
+    "status": "coming_soon",
+    "created_at": "2025-05-06T09:19:57.762919"
+  },
+  "timestamp": "2025-05-06T09:19:57.762919"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "e7401e50-d00a-43d5-b3cc-e207a7cec46a",
+    "full_name": "Lisa Cervantes",
+    "email": "samantha91@example.net",
+    "password_hash": "$2a$10$75728f03a1e4ec8532b8d1",
+    "registration_timestamp": "2025-05-06T09:19:58.442519",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:19:58.442519"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "fb773805-e3de-4b66-8f59-866f7be14857",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:19:59.239615",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:19:59.239615"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "c359a5af-9959-4a0b-84ec-e56032510c2e",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:20:09.264503",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:09.264503"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "7b6354ed-f049-48f8-acbd-b34f7d5b4286",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:20:11.254267",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:11.254267"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "c53e16b6-2a76-43e7-85fd-57f65905abc9",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:20:12.947270",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:12.947270"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "f5495483-dd40-4d3f-b848-4f3ff3793e1e",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:20:13.314087",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:13.314087"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "dd73fd9c-d54a-4757-9b80-781398f69749",
+    "full_name": "Ernest Hayes",
+    "email": "glennstephanie@example.com",
+    "password_hash": "$2a$10$1b4cec8d2ab05dcff0b955",
+    "registration_timestamp": "2025-05-06T09:20:13.537673",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:20:13.537673"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "396f3537-7183-48c6-8947-f55983e0cffa",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:20:13.561563",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:13.561563"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "900900a6-7388-48c0-a847-c6387db1d12e",
+    "full_name": "Kathleen Dixon",
+    "email": "adamsamy@example.com",
+    "password_hash": "$2a$10$23a406d5abba7631c2eb4a",
+    "registration_timestamp": "2025-05-06T09:20:13.916347",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:20:13.916347"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "a16efbb9-cc8c-471f-98d1-54586fa0c577",
+    "full_name": "Shannon Bishop",
+    "email": "imartin@example.org",
+    "password_hash": "$2a$10$ef8a7fb2a3d2d144dcf0a2",
+    "registration_timestamp": "2025-05-06T09:20:16.712757",
+    "referral_code": "aqypCWr9"
+  },
+  "timestamp": "2025-05-06T09:20:16.712757"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "8e1281d9-bead-466c-809e-82bc795f6229",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:20:16.798701",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:16.798701"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "d91bc996-a39e-4a45-9f0f-3bf72458d15f",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:20:17.167104",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:17.167104"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "b0be7c03-c1fc-4217-823a-80606e59595a",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:20:17.522050",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:17.522050"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "ce70e378-c60f-4e61-b067-8046ae08416a",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:20:17.787491",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:17.787491"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "3b1913c0-dd55-4b17-b277-2c01ff4bd9a8",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:20:17.944085",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:17.944085"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "3b77f82c-9df5-4fae-b3a3-f4a3c38ccd63",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:20:19.581911",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:19.581911"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "15be224a-a8fc-4f1a-a040-d6ef520d6119",
+    "name": "Modern Toaster",
+    "description": "Chair focus easy such hotel central plan physical heart.",
+    "price": 91.25,
+    "tags": [
+      "premium"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:20:19.819722"
+  },
+  "timestamp": "2025-05-06T09:20:19.819722"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "d0a4769d-afa1-4639-ae72-09a518e03083",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:20:21.951982",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:21.951982"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "87c28835-ab50-4d84-9e39-50661767590c",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:20:23.090455",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:23.090455"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "b9746ed4-36ad-4fee-9b3b-65a73f26600e",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:20:25.404018",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:25.404018"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "3f29ebfc-4427-4c13-a146-e8c91601b3d9",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:20:27.550755",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:27.550755"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "a3dce8c4-28a0-427f-8ae2-eac7397dec06",
+    "full_name": "Robert Mack",
+    "email": "rrobertson@example.net",
+    "password_hash": "$2a$10$fe5bf2ea5e33c5f7a5d58a",
+    "registration_timestamp": "2025-05-06T09:20:33.574941",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:20:33.574941"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "20daf3b1-672f-42c8-a13d-0bf31e4850eb",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:20:35.049836",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:35.049836"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "69763ab3-21d4-41df-a63f-90638877e254",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:20:38.067276",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:38.067276"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "3ee06080-3f68-4f16-b6da-709abe635d2b",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 85.68,
+    "purchase_timestamp": "2025-05-06T09:20:40.179186",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:40.179186"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "7c19741b-5bd7-47ec-8159-0f2e4303b9bb",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:20:41.336296",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:41.336296"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "71c59ea9-f49e-44e0-8aec-acbb73dfe096",
+    "name": "Essential Pet Shampoo",
+    "description": "Thus several animal phone student administration upon citizen lead yeah.",
+    "price": 21.45,
+    "tags": [
+      "new"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:20:44.436767"
+  },
+  "timestamp": "2025-05-06T09:20:44.436767"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "5f080959-684a-4d70-9f0c-257657de0736",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:20:45.186318",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:45.186318"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "6337a440-e22e-45e3-9aff-d370a64e71ba",
+    "name": "Professional Board Game",
+    "description": "City usually ever pressure economy head tough close how.",
+    "price": 44.12,
+    "tags": [
+      "featured"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:20:45.924323"
+  },
+  "timestamp": "2025-05-06T09:20:45.924323"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "1d967233-24af-4d49-85f2-b01371aec3b7",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:20:47.062084",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:47.062084"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "e2932eae-b73a-433d-ad8a-16fafd952739",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 61.2,
+    "purchase_timestamp": "2025-05-06T09:20:50.381703",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:50.381703"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "a9258969-650d-45b8-87d5-f455006a01c4",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 12.24,
+    "purchase_timestamp": "2025-05-06T09:20:51.363269",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:51.363269"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "96fd007c-39a3-4b9e-b370-119c79a5f87f",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:20:51.385065",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:51.385065"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "b79d844c-4926-4443-9205-ba44f82c3db5",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:20:51.878022",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:51.878022"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "e1899b90-21f7-41b1-acb0-d1327743fa28",
+    "name": "Modern Beauty Moisturizer",
+    "description": "Pretty region ability live car difficult quite act receive stage write.",
+    "price": 95.36,
+    "tags": [
+      "eco-friendly"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:20:51.932064"
+  },
+  "timestamp": "2025-05-06T09:20:51.932064"
+},
+{
+  "event_type": "UserRegistered",
+  "payload": {
+    "user_id": "5480a80a-1e94-401a-9900-534a7b9d7f59",
+    "full_name": "Carlos Jones",
+    "email": "zdavis@example.org",
+    "password_hash": "$2a$10$0a622576d43bb58ed61df7",
+    "registration_timestamp": "2025-05-06T09:20:52.980326",
+    "referral_code": null
+  },
+  "timestamp": "2025-05-06T09:20:52.980326"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "8242f210-1693-4984-bc65-f29776bddd1f",
+    "name": "Durable Windshield Wipers",
+    "description": "To cause but role goal investment social.",
+    "price": 67.89,
+    "tags": [
+      "premium",
+      "sale",
+      "eco-friendly"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:20:53.907091"
+  },
+  "timestamp": "2025-05-06T09:20:53.907091"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "b593577b-b095-481e-a7a4-45fea8e7a86d",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 36.72,
+    "purchase_timestamp": "2025-05-06T09:20:54.095586",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:54.095586"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "1fd4d6b6-c577-4c2c-a4b7-af03665cdfcd",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 24.48,
+    "purchase_timestamp": "2025-05-06T09:20:55.933539",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:55.933539"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "368ababb-7c53-42f0-92da-de9446e9d75d",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 2,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:20:56.927121",
+    "shipping_method": "Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:56.927121"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "a6e97667-0e5d-4e94-a3ad-5f74bf33d502",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 73.44,
+    "purchase_timestamp": "2025-05-06T09:20:58.718062",
+    "shipping_method": "Free Standard Shipping"
+  },
+  "timestamp": "2025-05-06T09:20:58.718062"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "92b83524-1145-4f6d-8e5a-14ec24ee2b50",
+    "name": "Ultra Books Cookbook",
+    "description": "Network outside parent single real summer probably feeling military.",
+    "price": 28.29,
+    "tags": [],
+    "status": "coming_soon",
+    "created_at": "2025-05-06T09:21:01.451972"
+  },
+  "timestamp": "2025-05-06T09:21:01.451972"
+},
+{
+  "event_type": "UserPurchasedProducts",
+  "payload": {
+    "purchase_id": "a7078c71-d0ce-4484-9695-dcaac8cea2b3",
+    "user_id": "35a20219-852d-46b0-b96b-474816a6e2dd",
+    "items": [
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 1,
+        "unit_price": 12.24
+      },
+      {
+        "product_id": "604fdf96-1f66-4b30-92f1-b068c981ba1b",
+        "quantity": 3,
+        "unit_price": 12.24
+      }
+    ],
+    "total_amount": 48.96,
+    "purchase_timestamp": "2025-05-06T09:21:02.523969",
+    "shipping_method": "Express Shipping"
+  },
+  "timestamp": "2025-05-06T09:21:02.523969"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "b18f8b31-d81a-4789-81ca-cf25b78e4327",
+    "name": "Professional Heating Pad",
+    "description": "Far approach today west manager both matter order month within would.",
+    "price": 28.4,
+    "tags": [
+      "premium"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:21:06.228399"
+  },
+  "timestamp": "2025-05-06T09:21:06.228399"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "69497fe2-d4bd-424b-a6f2-6f046c18d0e1",
+    "name": "Essential Sports Bicycle",
+    "description": "Inside national common likely would authority onto add democratic two we huge expert.",
+    "price": 51.95,
+    "tags": [
+      "sale",
+      "sale"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:21:06.256997"
+  },
+  "timestamp": "2025-05-06T09:21:06.256997"
+},
+{
+  "event_type": "ProductCreated",
+  "payload": {
+    "product_id": "5a39e516-69f5-486f-9f41-796ad92db7b7",
+    "name": "Lightweight Thermometer",
+    "description": "Reduce bar Mr pattern everyone finally memory data space movie hospital.",
+    "price": 51.93,
+    "tags": [
+      "sale",
+      "featured",
+      "sale"
+    ],
+    "status": "available",
+    "created_at": "2025-05-06T09:21:08.136791"
+  },
+  "timestamp": "2025-05-06T09:21:08.136791"
+}
+]

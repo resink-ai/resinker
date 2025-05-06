@@ -23,6 +23,3 @@ resinker = "resinker.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["resinker"]
-
-[tool.uv]
-repositories = ["pypi"]

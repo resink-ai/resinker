@@ -238,11 +238,18 @@ class FakerGenerator(Generator):
             # Method on a provider
             provider_name = parts[0]
             method_name = parts[1]
+            
+            # For custom providers like 'ecommerce', call the method directly
             try:
-                provider = getattr(self.faker, provider_name)
-                method = getattr(provider, method_name)
+                method = getattr(self.faker, method_name)
+                # If this succeeds, it means the method is directly on faker object
+                return method(**schema.get("params", {}))
             except AttributeError:
-                raise ValueError(f"Unknown Faker provider or method: {provider_name}.{method_name}")
+                # Try to get method from the provider
+                try:
+                    return self.faker.format(provider_method, **schema.get("params", {}))
+                except (AttributeError, KeyError):
+                    raise ValueError(f"Unknown Faker provider or method: {provider_method}")
         
         # Call the method with parameters
         params = schema.get("params", {})

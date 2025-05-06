@@ -13,6 +13,7 @@ import json
 from resinker.config.loader import ResinkerConfig
 from resinker.core.state_manager import StateManager, Entity
 from resinker.generators.generators import generator_factory, SchemaGenerator
+from resinker.generators.providers import EcommerceProvider
 
 logger = logging.getLogger(__name__)
 
@@ -73,6 +74,9 @@ class Orchestrator:
         self.faker = Faker()
         if config.simulation_settings.random_seed is not None:
             self.faker.seed_instance(config.simulation_settings.random_seed)
+            
+        # Register custom providers
+        self.faker.add_provider(EcommerceProvider)
         
         # Initialize the schema registry
         self.schema_registry = config.schemas
@@ -190,7 +194,7 @@ class Orchestrator:
             return
         
         entity_def = self.config.entities[entity_type]
-        schema_ref = entity_def["schema"]
+        schema_ref = entity_def.get("schema_ref", entity_def.get("schema"))
         
         # Extract the schema name from the reference
         if schema_ref.startswith("#/schemas/"):
