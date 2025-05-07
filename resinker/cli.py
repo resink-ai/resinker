@@ -58,7 +58,7 @@ def run_command(args: argparse.Namespace):
         orchestrator.initialize()
         orchestrator.run()
     except Exception as e:
-        logger.error(f"Error running simulation: {e}")
+        logger.error(f"Error running simulation: {e}", exc_info=True)
         sys.exit(1)
 
 def validate_command(args: argparse.Namespace):

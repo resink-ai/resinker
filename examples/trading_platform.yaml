@@ -1,0 +1,480 @@
+version: "1.0"
+
+simulation_settings:
+  duration: "30m"
+  initial_entity_counts:
+    User: 20
+    BankAccount: 10
+    Asset: 5
+  time_progression:
+    start_time: "now"
+    time_multiplier: 10.0
+  random_seed: 12345
+
+schemas:
+  UserID:
+    type: string
+    generator: uuid_v4
+    description: "Unique identifier for a user."
+  Email:
+    type: string
+    generator: faker.email
+    description: "User's email address."
+  Password:
+    type: string
+    generator: static_hashed
+    params:
+      algorithm: "bcrypt"
+      raw_value_source:
+        generator: faker.password
+        params:
+          length: 12
+          special_chars: true
+          digits: true
+          upper_case: true
+          lower_case: true
+  FullName:
+    type: string
+    generator: faker.name
+  PhoneNumber:
+    type: string
+    generator: faker.phone_number
+  Address:
+    type: object
+    properties:
+      street:
+        type: string
+        generator: faker.street_address
+      city:
+        type: string
+        generator: faker.city
+      state:
+        type: string
+        generator: faker.state
+      postal_code:
+        type: string
+        generator: faker.postcode
+      country:
+        type: string
+        generator: faker.country
+  DateOfBirth:
+    type: string
+    format: "date"
+    generator: faker.date_of_birth
+    params:
+      min_age: 18
+      max_age: 80
+  Nationality:
+    type: string
+    generator: faker.country
+  KYCStatus:
+    type: string
+    generator: choice
+    params:
+      choices: ["pending", "approved", "rejected"]
+      weights: [0.1, 0.85, 0.05]
+  BankAccountID:
+    type: string
+    generator: uuid_v4
+  BankName:
+    type: string
+    generator: faker.company
+  BankAccountNumber:
+    type: string
+    generator: faker.iban
+  AssetID:
+    type: string
+    generator: uuid_v4
+  AssetSymbol:
+    type: string
+    generator: choice
+    params:
+      choices: ["BTC", "ETH", "USDT", "BNB", "SOL"]
+  Currency:
+    type: string
+    generator: choice
+    params:
+      choices: ["USD", "EUR", "GBP"]
+  Amount:
+    type: number
+    generator: random_float
+    params:
+      min: 10.0
+      max: 100000.0
+      precision: 2
+  OrderID:
+    type: string
+    generator: uuid_v4
+  OrderType:
+    type: string
+    generator: choice
+    params:
+      choices: ["market", "limit"]
+  OrderSide:
+    type: string
+    generator: choice
+    params:
+      choices: ["buy", "sell"]
+  OrderStatus:
+    type: string
+    generator: choice
+    params:
+      choices: ["open", "filled", "cancelled", "rejected"]
+      weights: [0.5, 0.3, 0.15, 0.05]
+  Timestamp:
+    type: string
+    format: "iso8601"
+    generator: current_timestamp
+
+  # Payloads
+  UserSignUpPayload:
+    type: object
+    properties:
+      user_id: { $ref: "#/schemas/UserID" }
+      email: { $ref: "#/schemas/Email" }
+      password_hash: { $ref: "#/schemas/Password" }
+      full_name: { $ref: "#/schemas/FullName" }
+      phone: { $ref: "#/schemas/PhoneNumber" }
+      signup_timestamp: { $ref: "#/schemas/Timestamp" }
+  UserSignInPayload:
+    type: object
+    properties:
+      user_id:
+        { $ref: "#/schemas/UserID", from_entity: "User", field: "user_id" }
+      signin_timestamp: { $ref: "#/schemas/Timestamp" }
+      ip_address:
+        type: string
+        generator: faker.ipv4
+      user_agent:
+        type: string
+        generator: faker.user_agent
+  UserKYCPayload:
+    type: object
+    properties:
+      user_id:
+        { $ref: "#/schemas/UserID", from_entity: "User", field: "user_id" }
+      full_name:
+        { $ref: "#/schemas/FullName", from_entity: "User", field: "full_name" }
+      dob: { $ref: "#/schemas/DateOfBirth" }
+      nationality: { $ref: "#/schemas/Nationality" }
+      address: { $ref: "#/schemas/Address" }
+      kyc_status: { $ref: "#/schemas/KYCStatus" }
+      kyc_timestamp: { $ref: "#/schemas/Timestamp" }
+  AddBankAccountPayload:
+    type: object
+    properties:
+      user_id:
+        { $ref: "#/schemas/UserID", from_entity: "User", field: "user_id" }
+      bank_account_id: { $ref: "#/schemas/BankAccountID" }
+      bank_name: { $ref: "#/schemas/BankName" }
+      account_number: { $ref: "#/schemas/BankAccountNumber" }
+      currency: { $ref: "#/schemas/Currency" }
+      added_timestamp: { $ref: "#/schemas/Timestamp" }
+  DepositPayload:
+    type: object
+    properties:
+      user_id:
+        { $ref: "#/schemas/UserID", from_entity: "User", field: "user_id" }
+      bank_account_id:
+        {
+          $ref: "#/schemas/BankAccountID",
+          from_entity: "BankAccount",
+          field: "bank_account_id",
+        }
+      amount: { $ref: "#/schemas/Amount" }
+      currency: { $ref: "#/schemas/Currency" }
+      deposit_timestamp: { $ref: "#/schemas/Timestamp" }
+  WithdrawalPayload:
+    type: object
+    properties:
+      user_id:
+        { $ref: "#/schemas/UserID", from_entity: "User", field: "user_id" }
+      bank_account_id:
+        {
+          $ref: "#/schemas/BankAccountID",
+          from_entity: "BankAccount",
+          field: "bank_account_id",
+        }
+      amount: { $ref: "#/schemas/Amount" }
+      currency: { $ref: "#/schemas/Currency" }
+      withdrawal_timestamp: { $ref: "#/schemas/Timestamp" }
+  MarketOrderPayload:
+    type: object
+    properties:
+      order_id: { $ref: "#/schemas/OrderID" }
+      user_id:
+        { $ref: "#/schemas/UserID", from_entity: "User", field: "user_id" }
+      asset_id:
+        { $ref: "#/schemas/AssetID", from_entity: "Asset", field: "asset_id" }
+      symbol:
+        { $ref: "#/schemas/AssetSymbol", from_entity: "Asset", field: "symbol" }
+      side: { $ref: "#/schemas/OrderSide" }
+      amount: { $ref: "#/schemas/Amount" }
+      order_type:
+        type: string
+        generator: static
+        params:
+          value: "market"
+      status: { $ref: "#/schemas/OrderStatus" }
+      order_timestamp: { $ref: "#/schemas/Timestamp" }
+  LimitOrderPayload:
+    type: object
+    properties:
+      order_id: { $ref: "#/schemas/OrderID" }
+      user_id:
+        { $ref: "#/schemas/UserID", from_entity: "User", field: "user_id" }
+      asset_id:
+        { $ref: "#/schemas/AssetID", from_entity: "Asset", field: "asset_id" }
+      symbol:
+        { $ref: "#/schemas/AssetSymbol", from_entity: "Asset", field: "symbol" }
+      side: { $ref: "#/schemas/OrderSide" }
+      amount: { $ref: "#/schemas/Amount" }
+      price:
+        type: number
+        generator: random_float
+        params:
+          min: 10.0
+          max: 100000.0
+          precision: 2
+      order_type:
+        type: string
+        generator: static
+        params:
+          value: "limit"
+      status: { $ref: "#/schemas/OrderStatus" }
+      order_timestamp: { $ref: "#/schemas/Timestamp" }
+  CancelOrderPayload:
+    type: object
+    properties:
+      order_id:
+        { $ref: "#/schemas/OrderID", from_entity: "Order", field: "order_id" }
+      user_id:
+        { $ref: "#/schemas/UserID", from_entity: "User", field: "user_id" }
+      cancel_timestamp: { $ref: "#/schemas/Timestamp" }
+
+AssetPayload:
+  type: object
+  properties:
+    asset_id: { $ref: "#/schemas/AssetID" }
+    symbol: { $ref: "#/schemas/AssetSymbol" }
+
+entities:
+  User:
+    schema: "#/schemas/UserSignUpPayload"
+    primary_key: "user_id"
+    state_attributes:
+      is_signed_in: { type: boolean, default: false }
+      kyc_status: { type: string, default: "pending" }
+      balance: { type: number, default: 0.0, precision: 2 }
+  BankAccount:
+    schema: "#/schemas/AddBankAccountPayload"
+    primary_key: "bank_account_id"
+    state_attributes:
+      user_id: { type: string, from_field: "user_id" }
+      currency: { type: string, from_field: "currency" }
+  Asset:
+    schema: "#/schemas/AssetPayload"
+    primary_key: "symbol"
+    state_attributes:
+      asset_id: { type: string, from_field: "asset_id" }
+      symbol: { type: string, from_field: "symbol" }
+  Order:
+    schema: "#/schemas/MarketOrderPayload"
+    primary_key: "order_id"
+    state_attributes:
+      user_id: { type: string, from_field: "user_id" }
+      status: { type: string, from_field: "status" }
+
+# Event Types
+
+event_types:
+  UserSignUp:
+    payload_schema: "#/schemas/UserSignUpPayload"
+    produces_entity: "User"
+    frequency_weight: 10
+  UserSignIn:
+    payload_schema: "#/schemas/UserSignInPayload"
+    consumes_entities:
+      - name: "User"
+        alias: "signing_in_user"
+        selection_filter:
+          - field: "state.is_signed_in"
+            operator: "equals"
+            value: false
+    updates_entity_state:
+      - entity_alias: "signing_in_user"
+        set_attributes:
+          is_signed_in: true
+    frequency_weight: 20
+  UserKYC:
+    payload_schema: "#/schemas/UserKYCPayload"
+    consumes_entities:
+      - name: "User"
+        alias: "kyc_user"
+        selection_filter:
+          - field: "state.kyc_status"
+            operator: "equals"
+            value: "pending"
+    updates_entity_state:
+      - entity_alias: "kyc_user"
+        set_attributes:
+          kyc_status: { from_payload_field: "kyc_status" }
+    frequency_weight: 8
+  AddBankAccount:
+    payload_schema: "#/schemas/AddBankAccountPayload"
+    produces_entity: "BankAccount"
+    consumes_entities:
+      - name: "User"
+        alias: "account_owner"
+        selection_filter:
+          - field: "state.kyc_status"
+            operator: "equals"
+            value: "approved"
+    frequency_weight: 8
+  Deposit:
+    payload_schema: "#/schemas/DepositPayload"
+    consumes_entities:
+      - name: "User"
+        alias: "depositor"
+        selection_filter:
+          - field: "state.kyc_status"
+            operator: "equals"
+            value: "approved"
+      - name: "BankAccount"
+        alias: "deposit_account"
+    updates_entity_state:
+      - entity_alias: "depositor"
+        increment_attributes:
+          balance: { from_payload_field: "amount" }
+    frequency_weight: 12
+  Withdrawal:
+    payload_schema: "#/schemas/WithdrawalPayload"
+    consumes_entities:
+      - name: "User"
+        alias: "withdrawer"
+        selection_filter:
+          - field: "state.balance"
+            operator: "greater_than"
+            value: 10.0
+      - name: "BankAccount"
+        alias: "withdraw_account"
+    updates_entity_state:
+      - entity_alias: "withdrawer"
+        increment_attributes:
+          balance: { from_payload_field: "amount", negate: true }
+    frequency_weight: 6
+  MarketOrder:
+    payload_schema: "#/schemas/MarketOrderPayload"
+    produces_entity: "Order"
+    consumes_entities:
+      - name: "User"
+        alias: "trader"
+        selection_filter:
+          - field: "state.kyc_status"
+            operator: "equals"
+            value: "approved"
+      - name: "Asset"
+        alias: "asset"
+    updates_entity_state:
+      - entity_alias: "trader"
+        increment_attributes:
+          balance: { from_payload_field: "amount", negate: true }
+    frequency_weight: 15
+  LimitOrder:
+    payload_schema: "#/schemas/LimitOrderPayload"
+    produces_entity: "Order"
+    consumes_entities:
+      - name: "User"
+        alias: "trader"
+        selection_filter:
+          - field: "state.kyc_status"
+            operator: "equals"
+            value: "approved"
+      - name: "Asset"
+        alias: "asset"
+    updates_entity_state:
+      - entity_alias: "trader"
+        increment_attributes:
+          balance: { from_payload_field: "amount", negate: true }
+    frequency_weight: 10
+  CancelOrder:
+    payload_schema: "#/schemas/CancelOrderPayload"
+    consumes_entities:
+      - name: "Order"
+        alias: "order"
+        selection_filter:
+          - field: "state.status"
+            operator: "equals"
+            value: "open"
+      - name: "User"
+        alias: "canceller"
+    updates_entity_state:
+      - entity_alias: "order"
+        set_attributes:
+          status: "cancelled"
+    frequency_weight: 5
+
+# Scenarios
+scenarios:
+  NewUserOnboarding:
+    description: "A new user signs up, completes KYC, adds a bank account, and makes a deposit."
+    initiation_weight: 40
+    steps:
+      - event_type: "UserSignUp"
+      - event_type: "UserKYC"
+      - event_type: "AddBankAccount"
+      - event_type: "Deposit"
+  ActiveTrader:
+    description: "A verified user deposits funds, places market and limit orders, and withdraws."
+    initiation_weight: 30
+    requires_initial_entities:
+      - name: "User"
+        alias: "active_user"
+        selection_filter:
+          - field: "state.kyc_status"
+            operator: "equals"
+            value: "approved"
+      - name: "BankAccount"
+        alias: "user_bank"
+      - name: "Asset"
+        alias: "asset"
+    steps:
+      - event_type: "Deposit"
+      - event_type: "MarketOrder"
+      - event_type: "LimitOrder"
+      - event_type: "Withdrawal"
+  OrderCancellation:
+    description: "A user places a limit order and then cancels it."
+    initiation_weight: 15
+    requires_initial_entities:
+      - name: "User"
+        alias: "cancelling_user"
+        selection_filter:
+          - field: "state.kyc_status"
+            operator: "equals"
+            value: "approved"
+      - name: "Asset"
+        alias: "asset"
+    steps:
+      - event_type: "LimitOrder"
+      - event_type: "CancelOrder"
+  PowerUser:
+    description: "A user goes through the full journey: sign up, KYC, add bank, deposit, trade, withdraw."
+    initiation_weight: 15
+    steps:
+      - event_type: "UserSignUp"
+      - event_type: "UserKYC"
+      - event_type: "AddBankAccount"
+      - event_type: "Deposit"
+      - event_type: "MarketOrder"
+      - event_type: "LimitOrder"
+      - event_type: "Withdrawal"
+
+outputs:
+  - type: "file"
+    enabled: true
+    file_path: "output/trading_platform_events.json"
+    format: "json_pretty"
+  - type: "stdout"
+    enabled: false
+    format: "json_pretty"

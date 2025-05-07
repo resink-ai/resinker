@@ -221,18 +221,8 @@ class Orchestrator:
             # Create the entity
             entity = self.state_manager.create_entity(entity_type, entity_data, primary_key)
             
-            # Set initial state attributes
-            for attr_name, attr_def in state_attributes.items():
-                if attr_def.get("from_field"):
-                    field_name = attr_def["from_field"]
-                    if field_name in entity_data:
-                        entity.set_state(attr_name, entity_data[field_name])
-                        logger.debug(f"[EntityInit] Set state attribute '{attr_name}' from field '{field_name}' to value '{entity_data[field_name]}' for entity {entity}")
-                else:
-                    default_value = attr_def.get("default")
-                    if default_value is not None:
-                        entity.set_state(attr_name, default_value)
-                        logger.debug(f"[EntityInit] Set state attribute '{attr_name}' to default value '{default_value}' for entity {entity}")
+            # Initialize state attributes
+            self._initialize_entity_state_attributes(entity_type, entity, entity_data, "EntityInit")
     
     def _schedule_initial_events(self):
         """Schedule initial events based on frequency weights."""
@@ -408,7 +398,10 @@ class Orchestrator:
             if entity_type in self.entity_primary_keys:
                 primary_key = self.entity_primary_keys[entity_type]
                 entity = self.state_manager.create_entity(entity_type, payload, primary_key)
-                logger.debug(f"Created entity {entity_type} with ID {entity.id}")
+                logger.debug(f"[produces_entity] Created entity {entity_type} with ID {entity.id}")
+                
+                # Initialize state attributes
+                self._initialize_entity_state_attributes(entity_type, entity, payload, "produces_entity")
                 
                 # Save entity in context for potential state updates
                 context[f"entity_{entity_type}"] = entity
@@ -446,7 +439,10 @@ class Orchestrator:
                 if entity_type in self.entity_primary_keys:
                     primary_key = self.entity_primary_keys[entity_type]
                     entity = self.state_manager.create_entity(entity_type, payload, primary_key)
-                    logger.debug(f"Created entity {entity_type} with ID {entity.id}")
+                    logger.debug(f"[produces_or_updates_entity] Created entity {entity_type} with ID {entity.id}")
+                    
+                    # Initialize state attributes
+                    self._initialize_entity_state_attributes(entity_type, entity, payload, "produces_or_updates_entity")
                     
                     # Save entity in context for potential state updates
                     context[f"entity_{entity_type}"] = entity
@@ -514,6 +510,33 @@ class Orchestrator:
             else:
                 return None
         return value
+    
+    def _initialize_entity_state_attributes(self, entity_type: str, entity, data: Dict[str, Any], log_prefix: str = ""):
+        """Initialize state attributes for a newly created entity.
+        
+        Args:
+            entity_type: The type of entity
+            entity: The entity instance
+            data: The data dictionary containing field values
+            log_prefix: Prefix for log messages
+        """
+        if entity_type not in self.config.entities:
+            return
+        
+        entity_def = self.config.entities[entity_type]
+        state_attributes = entity_def.get("state_attributes", {})
+        
+        for attr_name, attr_def in state_attributes.items():
+            if attr_def.get("from_field"):
+                field_name = attr_def["from_field"]
+                if field_name in data:
+                    entity.set_state(attr_name, data[field_name])
+                    logger.debug(f"[{log_prefix}] Set state attribute '{attr_name}' from field '{field_name}' to value '{data[field_name]}' for entity {entity}")
+            else:
+                default_value = attr_def.get("default")
+                if default_value is not None:
+                    entity.set_state(attr_name, default_value)
+                    logger.debug(f"[{log_prefix}] Set state attribute '{attr_name}' to default value '{default_value}' for entity {entity}")
     
     def _emit_event(self, event: Event):
         """Emit an event to all output handlers."""
