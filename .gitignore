@@ -176,7 +176,7 @@ cython_debug/
 .env
 
 # Ignore all files in the data directory
-data/*
+output/*
 
 # Ignore all files in the logs directory
 logs/*

@@ -4,15 +4,15 @@ Orchestrator module for managing event generation.
 import logging
 import random
 import time
-from typing import Dict, Any, List, Optional, Set, Tuple
+from typing import Dict, Any, Optional
 from datetime import datetime, timedelta
 from faker import Faker
 import heapq
 import json
 
 from resinker.config.loader import ResinkerConfig
-from resinker.core.state_manager import StateManager, Entity
-from resinker.generators.generators import generator_factory, SchemaGenerator
+from resinker.core.state_manager import StateManager
+from resinker.generators.generators import SchemaGenerator
 from resinker.generators.providers import EcommerceProvider
 
 logger = logging.getLogger(__name__)

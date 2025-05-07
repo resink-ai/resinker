@@ -5,14 +5,11 @@ import logging
 import uuid
 import random
 import string
-from typing import Dict, Any, List, Optional, Union, Callable
-from datetime import datetime, timedelta
-import re
-import importlib
+from typing import Dict, Any, List
+from datetime import datetime
 from faker import Faker
-import json
 
-from resinker.core.state_manager import StateManager, Entity
+from resinker.core.state_manager import StateManager
 
 logger = logging.getLogger(__name__)
 
@@ -236,7 +233,6 @@ class FakerGenerator(Generator):
                 raise ValueError(f"Unknown Faker method: {method_name}")
         else:
             # Method on a provider
-            provider_name = parts[0]
             method_name = parts[1]
             
             # For custom providers like 'ecommerce', call the method directly
