@@ -62,8 +62,8 @@ schemas:
     format: "date"
     generator: faker.date_of_birth
     params:
-      min_age: 18
-      max_age: 80
+      minimum_age: 18
+      maximum_age: 80
   Nationality:
     type: string
     generator: faker.country
