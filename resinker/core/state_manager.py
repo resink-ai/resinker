@@ -148,7 +148,11 @@ class StateManager:
             for key, value in increment_attributes.items():
                 entity.increment_state(key, value)
             
-            logger.debug(f"Updated state for entity {entity_type} with ID {entity_id}, changed: {set_attributes.keys()} {increment_attributes.keys()}")
+            # Get the union of set and increment attributes
+            changed_attributes = set_attributes.keys() | increment_attributes.keys()
+            logger.debug(
+                f"Updated state for entity {entity_type} with ID {entity_id}, changed: {', '.join(changed_attributes)}"
+            )
             return entity
         else:
             logger.warning(f"Entity {entity_type} with ID {entity_id} not found for state update")

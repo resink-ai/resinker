@@ -8,7 +8,7 @@ simulation_settings:
   # Mutually exclusive with total_events. If both, duration takes precedence.
   duration: "10m"
   # Total number of events to generate before stopping.
-  # total_events: 10000
+  total_events: 10000
 
   # Initial number of entities to create at startup for specific types.
   # Useful for ensuring there's data to interact with from the beginning.
@@ -20,7 +20,7 @@ simulation_settings:
   time_progression:
     # Start date/time for the simulation. Events will have timestamps from this point.
     # If "now", uses the current system time at startup.
-    start_time: "2025-05-06T10:00:00Z"
+    start_time: "now"
     # How fast simulation time passes relative to real time.
     # 1.0 = real-time, 60.0 = 1 simulation second is 1 real minute.
     # For very fast generation, this might be less relevant than event rate.
@@ -213,7 +213,7 @@ entities:
     state_attributes:
       # Example: if a product is "available"
       current_status: { type: string, from_field: "status" } # Mirrors the 'status' field from its schema
-      # inventory_count: { type: integer, default: 100 } # If simulating inventory
+      inventory_count: { type: integer, default: 100 } # If simulating inventory
 
 #-------------------------------------------------------------------------------
 # Event Type Definitions
@@ -247,11 +247,11 @@ event_types:
           last_login_timestamp: { from_payload_field: "login_timestamp" }
     frequency_weight: 30
     # Optional: Max outstanding logged-in users (e.g. if you want to simulate sessions ending)
-    # max_active_instances_of_state:
-    #   entity: "User"
-    #   attribute: "is_logged_in"
-    #   value: true
-    #   max_count: 100 # e.g., only 100 users can be logged in concurrently
+    max_active_instances_of_state:
+      entity: "User"
+      attribute: "is_logged_in"
+      value: true
+      max_count: 100 # e.g., only 100 users can be logged in concurrently
 
   ProductCreatedOrUpdated: # Combines creation and updates for simplicity here
     payload_schema: "#/schemas/ProductUpdatePayload"
@@ -308,20 +308,20 @@ scenarios:
       - event_type: "UserRegistered"
         # Parameters specific to this step, e.g., override default values
         # for some payload fields for users in this scenario.
-        # payload_overrides:
-        #   referral_code: "SCENARIO_NEW"
+        payload_overrides:
+          referral_code: "SCENARIO_NEW"
 
       - event_type: "UserLoggedIn"
         # This step implicitly depends on the user created in the previous step.
         # The engine should track context within a scenario run.
-        # delay_after_previous_step: # Simulate time passing
-        #   min_seconds: 5
-        #   max_seconds: 120
+        delay_after_previous_step: # Simulate time passing
+          min_seconds: 5
+          max_seconds: 120
 
       - event_type: "UserPurchasedProducts"
-        # delay_after_previous_step:
-        #   min_seconds: 60
-        #   max_seconds: 600
+        delay_after_previous_step:
+          min_seconds: 60
+          max_seconds: 600
         # This purchase is by the user from step 1 & 2.
         # The engine needs to ensure products are available.
         # If not, this step might be skipped or the scenario might pause/retry.
@@ -339,12 +339,12 @@ scenarios:
             value: true
     steps:
       - event_type: "UserPurchasedProducts" # First purchase for this user in this scenario
-        # loop: # Generate this event multiple times for the same user
-        #  min_count: 1
-        #  max_count: 3
-        #  delay_between_loops:
-        #    min_seconds: 300 # 5 mins
-        #    max_seconds: 3600 # 1 hour
+        loop: # Generate this event multiple times for the same user
+          min_count: 1
+          max_count: 3
+          delay_between_loops:
+            min_seconds: 300 # 5 mins
+            max_seconds: 3600 # 1 hour
 
 #-------------------------------------------------------------------------------
 # Output Configuration (Where the generated data goes)

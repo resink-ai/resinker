@@ -212,27 +212,27 @@ class Orchestrator:
         # Initialize state attributes
         state_attributes = entity_def.get("state_attributes", {})
         
+        logger.debug(f"[EntityInit] Creating {count} entities of type '{entity_type}' with schema '{schema_name}' and primary key '{primary_key}'")
         # Create entities
-        for _ in range(count):
+        for i in range(count):
             # Generate entity data
-            entity_data = self.schema_generator.generate(schema, {"simulation_time": self.simulation_time})
-            
+            logger.debug(f"[EntityInit] Generating entity {i+1}/{count} for type '{entity_type}' with context: {{'simulation_time': {self.simulation_time}}}")
+            entity_data = self.schema_generator.generate(schema, {"simulation_time": self.simulation_time})            
             # Create the entity
             entity = self.state_manager.create_entity(entity_type, entity_data, primary_key)
             
             # Set initial state attributes
             for attr_name, attr_def in state_attributes.items():
-                # Handle different attribute types
                 if attr_def.get("from_field"):
-                    # Copy value from a field in the entity data
                     field_name = attr_def["from_field"]
                     if field_name in entity_data:
                         entity.set_state(attr_name, entity_data[field_name])
+                        logger.debug(f"[EntityInit] Set state attribute '{attr_name}' from field '{field_name}' to value '{entity_data[field_name]}' for entity {entity}")
                 else:
-                    # Use the default value
                     default_value = attr_def.get("default")
                     if default_value is not None:
                         entity.set_state(attr_name, default_value)
+                        logger.debug(f"[EntityInit] Set state attribute '{attr_name}' to default value '{default_value}' for entity {entity}")
     
     def _schedule_initial_events(self):
         """Schedule initial events based on frequency weights."""
@@ -324,6 +324,7 @@ class Orchestrator:
     def _generate_event(self, scheduled_event: ScheduledEvent) -> Optional[Event]:
         """Generate an event of the given type."""
         event_type = scheduled_event.event_type
+        logger.debug(f"[EventGen] Generating event of type '{event_type}' at simulation time {self.simulation_time} with scheduled_event context: {scheduled_event.context}")
         
         if event_type not in self.config.event_types:
             logger.warning(f"Unknown event type: {event_type}")
@@ -334,6 +335,7 @@ class Orchestrator:
         # Create context for event generation
         context = scheduled_event.context.copy()
         context["simulation_time"] = self.simulation_time
+        logger.debug(f"[EventGen] Event context after adding simulation_time: {context}")
         
         # Process entity consumption
         consumed_entities = {}
@@ -343,6 +345,7 @@ class Orchestrator:
                 alias = consumption["alias"]
                 selection_filter = consumption.get("selection_filter", [])
                 min_required = consumption.get("min_required", 1)
+                logger.debug(f"[EventGen] Consuming entities: type={entity_type}, alias={alias}, selection_filter={selection_filter}, min_required={min_required}")
                 
                 # Convert selection_filter to the format expected by state_manager
                 filter_list = []
@@ -355,9 +358,10 @@ class Orchestrator:
                 
                 # Find matching entities
                 entities = self.state_manager.find_entities(entity_type, filter_list)
+                logger.debug(f"[EventGen] Found {len(entities)} entities for type '{entity_type}' with filter {filter_list}")
                 
                 if len(entities) < min_required:
-                    logger.debug(f"Not enough entities of type {entity_type} for event {event_type}")
+                    logger.debug(f"[EventGen] Not enough entities of type {entity_type} for event {event_type}. Required: {min_required}, Found: {len(entities)}")
                     return None
                 
                 # Store the consumed entities
@@ -370,6 +374,7 @@ class Orchestrator:
                     context[f"entity_{alias}"] = entities[:min_required]
         
         context["consumed_entities"] = consumed_entities
+        logger.debug(f"[EventGen] Consumed entities: {consumed_entities}")
         
         # Generate the payload
         payload_schema_ref = event_def["payload_schema"]
@@ -390,11 +395,12 @@ class Orchestrator:
                 if "properties" in schema and key in schema["properties"]:
                     schema["properties"][key]["value"] = value
         
-        # Generate the payload
+        logger.debug(f"[EventGen] Generating payload for event '{event_type}' using schema '{schema_name}' and context: {context}")
         payload = self.schema_generator.generate(schema, context)
         
         # Create the event
         event = Event(event_type, payload, self.simulation_time)
+        logger.debug(f"[EventGen] Created event: {event}")
         
         # Process entity production
         if "produces_entity" in event_def:
