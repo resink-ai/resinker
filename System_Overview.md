@@ -373,84 +373,187 @@ outputs:
     format: "json_pretty" # "json" or "json_pretty"
 ```
 
-## Key Design Principles and Components:
+# Resinker Data Generation Schema: Full Breakdown
 
-1.  **`version`**: For future compatibility as the configuration schema evolves.
-2.  **`simulation_settings`**: Global parameters controlling the overall run, initial state, and time.
-3.  **`schemas`**:
-    - **Atomic Types**: Defines basic reusable types like `UserID`, `Email`, `Timestamp`. This promotes DRY (Don't Repeat Yourself).
-    - **Payload Schemas**: Defines the structure of each event's payload (e.g., `UserRegistrationPayload`).
-    - **`type`**: Standard JSON schema types (`string`, `number`, `integer`, `boolean`, `object`, `array`).
-    - **`generator`**: Specifies how to generate the data for a field.
-      - **Built-in**: `uuid_v4`, `random_int`, `random_float`, `choice`, `current_timestamp` (tied to simulation time), `static_hashed` (customizable), `random_alphanumeric`.
-      - **Faker**: `faker.<provider>.<method>` (e.g., `faker.email`, `faker.name`). You'd integrate the `Faker` library.
-      - **`$ref`**: Allows referencing other schemas, crucial for composition.
-      - **`from_entity`**: Special directive to pull a value from an existing entity instance (e.g., `user_id` for login comes from an existing `User` entity).
-      - **`derived`**: For fields whose values are calculated from other fields in the same payload.
-      - **`conditional_choice`**: Allows choosing values based on other field values.
-    - **`params`**: Parameters specific to each generator (e.g., `min`, `max` for `random_int`).
-    - **`constraints`**: (Implicitly defined by generator params, but could be explicit e.g., `maxLength`, `pattern`). The `nullable_probability` is a form of constraint.
-    - **`format`**: For types like `string` (e.g., `iso8601` for timestamps).
-4.  **`entities`**:
-    - Defines the stateful objects your system needs to track (e.g., `User`, `Product`).
-    - `schema`: Links to a schema defining its data structure.
-    - `primary_key`: The field that uniquely identifies an instance of this entity. Essential for the state manager.
-    - `state_attributes`: Custom attributes managed by the simulation engine that are not part of the core schema but reflect the entity's state in the simulation (e.g., `is_logged_in`). Events can modify these.
-5.  **`event_types`**:
-    - `payload_schema`: Links to the schema for this event's data.
-    - `produces_entity`: If this event creates a new instance of a defined `entity` (e.g., `UserRegistered` creates a `User`).
-    - `produces_or_updates_entity`: If the event might create a new entity or modify an existing one.
-    - `consumes_entities`: Critical for dependencies. Specifies which existing entities are required for this event to occur.
-      - `name`: The entity type.
-      - `alias`: A local name used in `updates_entity_state` or `selection_filter`.
-      - `selection_filter`: Rules to pick specific instances of the consumed entity (e.g., a user who is not logged in, a product that is available). This is how you enforce constraints like "user must be registered" or "product must be listed."
-    - `updates_entity_state`: Defines how this event changes the `state_attributes` of consumed or produced entities.
-      - `from_payload_field`: Pulls value from the current event's payload.
-    - `frequency_weight`: A simple way to control the relative likelihood of an event being chosen for generation if its preconditions are met. The actual generation rate also depends on how quickly dependencies can be satisfied.
-6.  **`scenarios`** (Optional but Powerful):
-    - Allows defining explicit multi-step sequences of events.
-    - `initiation_weight`: How likely this scenario is to be picked.
-    - `steps`: A list of events to be generated in order. The engine would manage the context (e.g., the user created in step 1 is the one logging in for step 2).
-    - `requires_initial_entities`: A scenario might need certain entities to already exist to even begin.
-    - This section adds a layer of behavioral modeling on top of the reactive event generation based on `frequency_weight` and `consumes_entities`.
-7.  **`outputs`**: Defines where the generated event data should be sent.
+## 1. `version`
 
-**How Dependencies and Sequences are Handled:**
+**Purpose:**  
+Specifies the configuration schema version.  
+**Impact:**  
+Ensures compatibility as the configuration format evolves. Always set this to the latest supported version (e.g., `"1.0"`).
 
-- **Entity Creation:** `produces_entity` in an event type tells the engine to create and store a new entity instance in its state manager.
-- **Entity Consumption:** `consumes_entities` is the primary mechanism for dependencies. An event can only be generated if:
-  1.  The required entity types exist.
-  2.  Instances matching the `selection_filter` can be found in the state manager.
-- **State Updates:** `updates_entity_state` allows events to change the state of entities, which in turn affects the `selection_filter` for future events (e.g., logging a user in changes `is_logged_in` to `true`, making them eligible for purchase events but not for another login event until logged out).
-- **`from_entity` in Schemas**: When defining a payload field, `from_entity` ensures that the value is correctly sourced from an entity instance selected during the `consumes_entities` phase of event generation.
-- **Scenarios:** Provide a more explicit way to define hard sequences for specific user journeys or operational flows. The engine would iterate through scenario steps, ensuring that the entity context is passed along (e.g., the `user_id` from a `UserRegistered` step is used for the subsequent `UserLoggedIn` step in the same scenario).
+---
 
-**Python Application Architecture Sketch:**
+## 2. `simulation_settings`
 
-1.  **Config Loader:** Uses `PyYAML` to load and potentially Pydantic models for validation.
-2.  **State Manager:** A class responsible for:
-    - Storing instances of entities (e.g., a dictionary of `user_id -> UserObject`).
-    - Allowing querying/filtering entities based on `selection_filter`.
-    - Updating entity state.
-3.  **Generator Engine:**
-    - A collection of generator functions/classes for each `generator` type in the YAML.
-    - Parses schema definitions to produce data.
-    - Handles `faker`, `derived` fields, `conditional_choice` etc.
-4.  **Event Scheduler/Orchestrator:**
-    - The core logic.
-    - Maintains the simulation clock.
-    - Decides which event to generate next based on:
-      - `frequency_weight` of `event_types`.
-      - Active `scenarios` and their current step.
-      - Checks `consumes_entities` and `selection_filter` against the `StateManager`.
-    - Coordinates with the `Generator Engine` to create the event payload.
-    - Instructs the `StateManager` to update/create entities.
-    - Sends the event to the defined `outputs`.
-5.  **Output Adapters:** Modules for sending data to Kafka, Kinesis, stdout, etc.
+**Purpose:**  
+Controls the overall simulation run, including how long it runs, how many events are generated, the initial state, and time progression.
 
-## Developer guide
+**Options:**
 
-1. Resinker is a python uv project, project details are defined in the pyproject.toml
-2. Model name is `resinker`
-3. Resinker uses python `faker` library for generating realistic data.
-4. Resinker has expressive configuration parsing and validations, in case of mis-configuration, it can remind of where and what is wrong with the configuration file.
+| Option                  | Type    | Description                                                                                                                                                                                             | Example     | Impact                                                                            |
+| ----------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------------------------- |
+| `duration`              | string  | How long the simulation should run. Format: `<number><unit>` where unit is `s` (seconds), `m` (minutes), or `h` (hours). Mutually exclusive with `total_events` (if both, `duration` takes precedence). | `"10m"`     | Limits the simulation to a set time window.                                       |
+| `total_events`          | integer | Total number of events to generate before stopping.                                                                                                                                                     | `10000`     | Limits the simulation by event count instead of time.                             |
+| `initial_entity_counts` | object  | Specifies how many of each entity type to create at startup. Keys are entity names, values are counts.                                                                                                  | `User: 10`  | Ensures there are entities available for events to operate on from the beginning. |
+| `time_progression`      | object  | Controls simulation time. See below for sub-options.                                                                                                                                                    | (see below) | Affects event timestamps and the pace of simulated time.                          |
+| `random_seed`           | integer | Seed for random number generators.                                                                                                                                                                      | `42`        | Makes runs reproducible (same config and seed = same data).                       |
+
+**`time_progression` sub-options:**
+
+| Option            | Type   | Description                                                                                                      | Example                        | Impact                                                                                 |
+| ----------------- | ------ | ---------------------------------------------------------------------------------------------------------------- | ------------------------------ | -------------------------------------------------------------------------------------- |
+| `start_time`      | string | When the simulation starts. `"now"` or ISO 8601 datetime.                                                        | `"now"`, `"2025-01-01T00:00Z"` | Sets the base timestamp for all generated events.                                      |
+| `time_multiplier` | float  | How fast simulation time passes relative to real time. `1.0` = real time, `60.0` = 1 sim second = 1 real minute. | `1.0`, `10.0`                  | Controls the speed of simulated time, affecting event timestamps and time-based logic. |
+
+**How these options impact data:**
+
+- `duration`/`total_events` determine when the simulation stops.
+- `initial_entity_counts` ensures there are enough entities for events (e.g., users to log in, products to purchase).
+- `time_progression` affects event timestamps and can simulate rapid or slow time passage.
+- `random_seed` ensures repeatability for testing or debugging.
+
+---
+
+## 3. `schemas`
+
+**Purpose:**  
+Defines the structure and generation logic for all data objects and event payloads.
+
+**Types of schemas:**
+
+- **Atomic Types:** Reusable primitives (e.g., `UserID`, `Email`, `Timestamp`).
+- **Payload Schemas:** Complex objects for event payloads (e.g., `UserRegistrationPayload`).
+
+**Schema fields:**
+
+| Field                   | Type   | Description                                                                   | Example                          |
+| ----------------------- | ------ | ----------------------------------------------------------------------------- | -------------------------------- |
+| `type`                  | string | JSON schema type: `string`, `number`, `integer`, `boolean`, `object`, `array` | `"string"`, `"object"`           |
+| `generator`             | string | How to generate the value. See below for options.                             | `"uuid_v4"`, `"faker.email"`     |
+| `params`                | object | Parameters for the generator (e.g., min/max for numbers, choices for enums).  | `{min: 1, max: 10}`              |
+| `description`           | string | Human-readable description.                                                   | `"Unique identifier for a user"` |
+| `format`                | string | For strings: `"iso8601"`, `"date"`, `"time"`, `"unix"`, etc.                  | `"iso8601"`                      |
+| `properties`            | object | For objects: field definitions.                                               | `{user_id: {...}, ...}`          |
+| `items`                 | object | For arrays: schema for array items.                                           | `{type: "string"}`               |
+| `min_items`/`max_items` | int    | For arrays: min/max number of items.                                          | `1`, `5`                         |
+| `nullable_probability`  | float  | Probability this field is null (0.0 to 1.0).                                  | `0.7`                            |
+| `$ref`                  | string | Reference to another schema.                                                  | `"#/schemas/UserID"`             |
+| `from_entity`           | string | Pull value from an existing entity instance.                                  | `"User"`                         |
+| `field`                 | string | Field name in the referenced entity.                                          | `"user_id"`                      |
+
+**Generator options:**
+
+- **Built-in:** `uuid_v4`, `random_int`, `random_float`, `choice`, `current_timestamp`, `static_hashed`, `random_alphanumeric`, `derived`, `conditional_choice`
+- **Faker:** `faker.<provider>.<method>` (e.g., `faker.email`, `faker.name`)
+- **References:** Use `$ref` to reuse schema definitions.
+- **Entity references:** Use `from_entity` and `field` to pull values from existing entities.
+
+**Impact:**  
+Schemas define the shape and content of all generated data, including how realistic, varied, or constrained the data is.
+
+---
+
+## 4. `entities`
+
+**Purpose:**  
+Defines the stateful objects in your simulation (e.g., users, products).
+
+| Field              | Type   | Description                                                                       | Example                                           |
+| ------------------ | ------ | --------------------------------------------------------------------------------- | ------------------------------------------------- |
+| `schema`           | string | Reference to the schema defining the entity's data structure.                     | `"#/schemas/UserRegistrationPayload"`             |
+| `primary_key`      | string | Field that uniquely identifies an instance of this entity.                        | `"user_id"`                                       |
+| `state_attributes` | object | Custom attributes managed by the simulation engine (not part of the core schema). | `{is_logged_in: {type: boolean, default: false}}` |
+
+**Impact:**  
+Entities are tracked throughout the simulation. Their state can be updated by events, and they can be referenced in event payloads and dependencies.
+
+---
+
+## 5. `event_types`
+
+**Purpose:**  
+Defines the types of events to generate, their payloads, and how they interact with entities.
+
+| Field                        | Type   | Description                                                    | Example                               |
+| ---------------------------- | ------ | -------------------------------------------------------------- | ------------------------------------- |
+| `payload_schema`             | string | Reference to the schema for this event's data.                 | `"#/schemas/UserRegistrationPayload"` |
+| `produces_entity`            | string | If this event creates a new entity instance.                   | `"User"`                              |
+| `produces_or_updates_entity` | string | If this event may create or update an entity.                  | `"Product"`                           |
+| `consumes_entities`          | list   | Which existing entities are required for this event.           | See below                             |
+| `updates_entity_state`       | list   | How this event changes the state of entities.                  | See below                             |
+| `frequency_weight`           | number | Relative likelihood of this event being chosen for generation. | `10`                                  |
+
+**`consumes_entities` subfields:**
+
+- `name`: Entity type.
+- `alias`: Local name for referencing in updates or filters.
+- `selection_filter`: Rules for picking specific instances (e.g., only users not logged in).
+
+**`updates_entity_state` subfields:**
+
+- `entity_alias`: Which entity to update.
+- `set_attributes`: Set state attributes to specific values.
+- `increment_attributes`: Increment state attributes by a value.
+- `from_payload_field`: Use a value from the event payload.
+
+**Impact:**  
+Event types control what happens in the simulation, how entities are created/updated, and how event dependencies are enforced.
+
+---
+
+## 6. `scenarios` (Optional)
+
+**Purpose:**  
+Defines multi-step, stateful user journeys or operational flows.
+
+| Field                       | Type   | Description                                                                 | Example                                                  |
+| --------------------------- | ------ | --------------------------------------------------------------------------- | -------------------------------------------------------- |
+| `description`               | string | Human-readable description.                                                 | `"A new user registers, logs in, and makes a purchase."` |
+| `initiation_weight`         | number | Likelihood of this scenario being picked.                                   | `70`                                                     |
+| `steps`                     | list   | Sequence of events to generate, with optional payload overrides and delays. | See below                                                |
+| `requires_initial_entities` | list   | Entities that must exist for the scenario to start.                         | See below                                                |
+
+**`steps` subfields:**
+
+- `event_type`: Event to generate.
+- `payload_overrides`: Override default payload values for this step.
+- `delay_after_previous_step`: Simulate time passing between steps.
+
+**Impact:**  
+Scenarios allow you to model realistic, multi-step behaviors and enforce strict event orderings.
+
+---
+
+## 7. `outputs`
+
+**Purpose:**  
+Specifies where the generated data should be sent.
+
+| Field           | Type    | Description                                                     | Example                           |
+| --------------- | ------- | --------------------------------------------------------------- | --------------------------------- |
+| `type`          | string  | Output type: `"file"`, `"stdout"`, `"kafka"`, `"kinesis"`, etc. | `"file"`                          |
+| `enabled`       | boolean | Whether this output is active.                                  | `true`                            |
+| `file_path`     | string  | For file outputs: where to write the data.                      | `"output/events.json"`            |
+| `format`        | string  | Output format: `"json"`, `"json_pretty"`, etc.                  | `"json_pretty"`                   |
+| `topic_mapping` | object  | For Kafka: map event types to topics.                           | `{UserRegistered: "user_events"}` |
+| `kafka_brokers` | string  | For Kafka: broker addresses.                                    | `"localhost:9092"`                |
+| ...             | ...     | Other output-specific options (see examples).                   |                                   |
+
+**Impact:**  
+Controls where and how your generated data is delivered.
+
+---
+
+## How Dependencies and Sequences are Handled
+
+- **Entity Creation:** `produces_entity` in an event type creates and stores a new entity instance.
+- **Entity Consumption:** `consumes_entities` enforces dependencies—an event can only be generated if the required entities exist and match the `selection_filter`.
+- **State Updates:** `updates_entity_state` allows events to change entity state, affecting future event eligibility.
+- **Scenarios:** Provide explicit, multi-step flows, passing context (e.g., a user created in step 1 is used in step 2).
+
+---
+
+## Example
+
+See [`examples/sample_events.yaml`](examples/sample_events.yaml) and [`examples/ecommerce_events.yaml`](examples/ecommerce_events.yaml) for full configurations.
