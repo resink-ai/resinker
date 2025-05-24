@@ -3,9 +3,8 @@ State manager module for handling entities and their states.
 """
 
 import logging
-from typing import Dict, Any, List, Optional, Set, Tuple
+from typing import Dict, Any, List, Optional, Set
 import operator
-import copy
 import uuid
 from datetime import datetime
 
