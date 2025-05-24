@@ -53,3 +53,7 @@ resinker run -c your_config.yaml
 ## Documentation
 
 For detailed documentation and examples, see the [System Overview](System_Overview.md).
+
+## Community
+
+[![Discord](https://img.shields.io/discord/1375892790713647254?label=Discord&logo=discord&logoColor=green&color=7289DA)](https://discord.gg/Sys6MWaX)
