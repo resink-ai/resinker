@@ -1,5 +1,59 @@
 # Resinker: A YAML-based configuration system for mocking event streams
 
+## Import/Include Functionality
+
+Resinker supports importing other YAML configuration files to enable modular and reusable configurations. This allows you to organize your schemas, event types, and scenarios across multiple files.
+
+### How to Use Imports
+
+Add an `imports` key at the top level of your YAML configuration file:
+
+```yaml
+version: "1.0"
+
+# Import other configuration files
+imports:
+  - "schemas.yaml" # Import common schemas and entities
+  - "onboarding_events.yaml" # Import user onboarding events
+  - "trading_events.yaml" # Import trading/purchase events
+
+# Your configuration continues here...
+simulation_settings:
+  duration: "5m"
+  # ... rest of configuration
+```
+
+### Import Rules
+
+1. **Relative Paths**: Import paths are resolved relative to the importing file's directory
+2. **Absolute Paths**: Absolute paths are supported and used as-is
+3. **Merge Strategy**: Imported configurations are deep-merged with the main configuration
+4. **Precedence**: The main configuration file takes precedence over imported configurations
+5. **Circular Imports**: Circular imports are detected and will raise an error
+6. **Recursive Imports**: Imported files can themselves import other files
+
+### Merge Behavior
+
+- **Objects/Dictionaries**: Deep merged - keys from both configurations are combined
+- **Arrays/Lists**: Concatenated - items from imported files come first
+- **Scalar Values**: Main configuration overrides imported values
+
+### Example Structure
+
+```
+mysas/
+├── events_main.yaml      # Main configuration file
+├── schemas.yaml          # Common schemas and entities
+├── onboarding_events.yaml # User onboarding event types
+└── trading_events.yaml   # Trading/purchase event types
+```
+
+### Running with Imports
+
+```bash
+resinker run -c mysas/events_main.yaml
+```
+
 ## Example YAML configuration
 
 ```yaml

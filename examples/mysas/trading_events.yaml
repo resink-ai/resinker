@@ -1,0 +1,93 @@
+# Trading and purchase event types
+schemas:
+  PurchasePayload:
+    type: object
+    properties:
+      purchase_id:
+        type: string
+        generator: uuid_v4
+      user_id:
+        { $ref: "#/schemas/UserID", from_entity: "User", field: "user_id" }
+      items:
+        type: array
+        min_items: 1
+        max_items: 5
+        items:
+          type: object
+          properties:
+            product_id:
+              { type: string, from_entity: "Product", field: "product_id" }
+            quantity:
+              type: integer
+              generator: random_int
+              params:
+                min: 1
+                max: 3
+            unit_price:
+              {
+                $ref: "#/schemas/ProductPrice",
+                from_entity: "Product",
+                field: "price",
+              }
+      total_amount:
+        type: number
+        generator: derived
+        params:
+          expression: "sum(item['quantity'] * item['unit_price'] for item in items)"
+          precision: 2
+      purchase_timestamp: { $ref: "#/schemas/Timestamp" }
+      shipping_method:
+        type: string
+        generator: conditional_choice
+        params:
+          condition_field: "total_amount"
+          cases:
+            - condition_value_greater_than: 50.00
+              choices: ["Free Standard Shipping", "Express Shipping"]
+              weights: [0.8, 0.2]
+            - default:
+              choices: ["Standard Shipping", "Express Shipping"]
+              weights: [0.7, 0.3]
+
+event_types:
+  ProductCreatedOrUpdated:
+    payload_schema: "#/schemas/ProductUpdatePayload"
+    produces_or_updates_entity: "Product"
+    update_existing_probability: 0.1
+    frequency_weight: 5
+
+  UserPurchasedProducts:
+    payload_schema: "#/schemas/PurchasePayload"
+    consumes_entities:
+      - name: "User"
+        alias: "buyer"
+        selection_filter:
+          - field: "state.is_logged_in"
+            operator: "equals"
+            value: true
+      - name: "Product"
+        alias: "purchased_item"
+        selection_filter:
+          - field: "state.current_status"
+            operator: "equals"
+            value: "available"
+        min_required: 1
+    updates_entity_state:
+      - entity_alias: "buyer"
+        increment_attributes:
+          total_purchase_value: { from_payload_field: "total_amount" }
+    frequency_weight: 15
+
+scenarios:
+  ShoppingSpree:
+    description: "An existing logged-in user makes multiple purchases"
+    initiation_weight: 30
+    requires_initial_entities:
+      - name: "User"
+        alias: "active_user"
+        selection_filter:
+          - field: "state.is_logged_in"
+            operator: "equals"
+            value: true
+    steps:
+      - event_type: "UserPurchasedProducts"

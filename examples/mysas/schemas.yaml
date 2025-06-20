@@ -1,0 +1,118 @@
+# Common schemas that can be imported by other configuration files
+schemas:
+  UserID:
+    type: string
+    generator: uuid_v4
+    description: "Unique identifier for a user."
+
+  Email:
+    type: string
+    generator: faker.email
+    description: "User's email address."
+
+  Password:
+    type: string
+    generator: static_hashed
+    params:
+      algorithm: "bcrypt"
+      raw_value_source:
+        generator: faker.password
+        params:
+          length: 12
+          special_chars: true
+          digits: true
+          upper_case: true
+          lower_case: true
+
+  Timestamp:
+    type: string
+    format: "iso8601"
+    generator: current_timestamp
+    description: "ISO 8601 timestamp"
+
+  ProductName:
+    type: string
+    generator: faker.ecommerce.product_name
+
+  ProductPrice:
+    type: number
+    generator: random_float
+    params:
+      min: 0.99
+      max: 999.99
+      precision: 2
+
+  # Basic entity schemas
+  UserRegistrationPayload:
+    type: object
+    properties:
+      user_id: { $ref: "#/schemas/UserID" }
+      full_name:
+        type: string
+        generator: faker.name
+      email: { $ref: "#/schemas/Email" }
+      password_hash: { $ref: "#/schemas/Password" }
+      registration_timestamp: { $ref: "#/schemas/Timestamp" }
+      referral_code:
+        type: string
+        generator: random_alphanumeric
+        params:
+          length: 8
+        nullable_probability: 0.7
+
+  UserLoginPayload:
+    type: object
+    properties:
+      user_id:
+        { $ref: "#/schemas/UserID", from_entity: "User", field: "user_id" }
+      login_timestamp: { $ref: "#/schemas/Timestamp" }
+      ip_address:
+        type: string
+        generator: faker.ipv4
+      user_agent:
+        type: string
+        generator: faker.user_agent
+
+  ProductUpdatePayload:
+    type: object
+    properties:
+      product_id:
+        type: string
+        generator: uuid_v4
+      name: { $ref: "#/schemas/ProductName" }
+      description:
+        type: string
+        generator: faker.lorem.sentence
+        params:
+          nb_words: 10
+      price: { $ref: "#/schemas/ProductPrice" }
+      tags:
+        type: array
+        items:
+          type: string
+          generator: choice
+          params:
+            choices: ["new", "featured", "sale", "eco-friendly", "premium"]
+        min_items: 0
+        max_items: 3
+      status:
+        type: string
+        generator: choice
+        params:
+          choices: ["available", "discontinued", "coming_soon"]
+      updated_at: { $ref: "#/schemas/Timestamp" }
+
+entities:
+  User:
+    schema: "#/schemas/UserRegistrationPayload"
+    primary_key: "user_id"
+    state_attributes:
+      is_logged_in: { type: boolean, default: false }
+      last_login_timestamp: { $ref: "#/schemas/Timestamp", nullable: true }
+      total_purchase_value: { type: number, default: 0.0, precision: 2 }
+
+  Product:
+    schema: "#/schemas/ProductUpdatePayload"
+    primary_key: "product_id"
+    state_attributes:
+      current_status: { type: string, from_field: "status" }

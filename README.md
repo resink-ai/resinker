@@ -5,6 +5,7 @@ A YAML-based configuration system for mocking event streams. Resinker allows you
 ## Features
 
 - Define your event schemas in YAML
+- **Import/include other YAML files for modular configurations**
 - Model complex entity relationships and state changes
 - Generate realistic event data using the Faker library
 - Define complex scenarios and event sequences
@@ -28,6 +29,12 @@ uv pip install resinker
 
 ```yaml
 version: "1.0"
+
+# Optional: Import other configuration files
+imports:
+  - "schemas.yaml"
+  - "events.yaml"
+
 simulation_settings:
   duration: "10m"
   initial_entity_counts:
@@ -47,8 +54,34 @@ outputs:
 2. Run Resinker:
 
 ```bash
-resinker run -c your_config.yaml
+python -m resinker run -c examples/mysas/events_main.yaml --verbose
+python -m resinker validate -c examples/mysas/events_main.yaml
+python -m resinker info -c examples/mysas/events_main.yaml
 ```
+
+## Modular Configuration
+
+Resinker supports importing other YAML files to create modular, reusable configurations:
+
+```yaml
+# main.yaml
+version: "1.0"
+imports:
+  - "schemas.yaml"
+  - "user_events.yaml"
+  - "product_events.yaml"
+
+simulation_settings:
+  duration: "5m"
+  # ... rest of configuration
+```
+
+This allows you to:
+
+- Share common schemas across multiple configurations
+- Organize events by domain or feature
+- Enable team collaboration on different modules
+- Maintain cleaner, more focused configuration files
 
 ## Documentation
 

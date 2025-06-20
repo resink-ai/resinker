@@ -1,0 +1,30 @@
+# User onboarding event types
+event_types:
+  UserRegistered:
+    payload_schema: "#/schemas/UserRegistrationPayload"
+    produces_entity: "User"
+    frequency_weight: 10
+
+  UserLoggedIn:
+    payload_schema: "#/schemas/UserLoginPayload"
+    consumes_entities:
+      - name: "User"
+        alias: "logging_in_user"
+        selection_filter:
+          - field: "state.is_logged_in"
+            operator: "equals"
+            value: false
+    updates_entity_state:
+      - entity_alias: "logging_in_user"
+        set_attributes:
+          is_logged_in: true
+          last_login_timestamp: { from_payload_field: "login_timestamp" }
+    frequency_weight: 30
+
+scenarios:
+  NewUserOnboarding:
+    description: "A new user registers and logs in"
+    initiation_weight: 50
+    steps:
+      - event_type: "UserRegistered"
+      - event_type: "UserLoggedIn"

@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.github": true,
+        "**/.vscode": true,
+        "**/.ruff_cache": true,
+        "**/.venv": true,
+    }
+}

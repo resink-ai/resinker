@@ -1,0 +1,50 @@
+version: "1.0"
+
+# Import other configuration files
+imports:
+  - "schemas.yaml" # Import common schemas and entities
+  - "onboarding_events.yaml" # Import user onboarding events
+  - "trading_events.yaml" # Import trading/purchase events
+
+# Global simulation settings
+simulation_settings:
+  duration: "5m"
+  initial_entity_counts:
+    Product: 50
+    User: 10
+
+  time_progression:
+    start_time: "now"
+    time_multiplier: 1.0
+
+  random_seed: 42
+
+# Additional schemas specific to this configuration
+schemas:
+  CustomField:
+    type: string
+    generator: faker.company
+    description: "Custom field for this specific configuration"
+
+# Additional event types specific to this configuration
+event_types:
+  CustomEvent:
+    payload_schema: "#/schemas/UserLoginPayload" # Reuse imported schema
+    consumes_entities:
+      - name: "User"
+        alias: "target_user"
+        selection_filter:
+          - field: "state.is_logged_in"
+            operator: "equals"
+            value: true
+    frequency_weight: 5
+
+# Output configuration
+outputs:
+  - type: "stdout"
+    enabled: true
+    format: "json_pretty"
+  - type: "file"
+    enabled: true
+    file_path: "output/mysas_events.json"
+    format: "json"
