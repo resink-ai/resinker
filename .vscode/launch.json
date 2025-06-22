@@ -13,7 +13,7 @@
             "args": [
                 "run",
                 "-c",
-                "examples/trading_platform.yaml",
+                "examples/sample_events.yaml",
                 "--verbose"
             ],
             "justMyCode": false

@@ -8,13 +8,13 @@ simulation_settings:
   # Mutually exclusive with total_events. If both, duration takes precedence.
   duration: "10m"
   # Total number of events to generate before stopping.
-  total_events: 10000
+  total_events: 32
 
   # Initial number of entities to create at startup for specific types.
   # Useful for ensuring there's data to interact with from the beginning.
   initial_entity_counts:
-    Product: 50 # Create 50 products at the start
-    User: 10 # Create 10 users at the start
+    Product: 5 # Create 5 products at the start
+    User: 3 # Create 3 users at the start
 
   # Time progression settings
   time_progression:
